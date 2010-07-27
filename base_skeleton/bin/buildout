@@ -1,0 +1,12 @@
+#!__TARGET__/Python-2.4/bin/python
+
+import sys
+sys.path[0:0] = [
+  '__TARGET__/buildout-cache/eggs/setuptools-0.6c8-py2.4.egg',
+  '__TARGET__/buildout-cache/eggs/zc.buildout-1.1.1-py2.4.egg',
+  ]
+
+import zc.buildout.buildout
+
+if __name__ == '__main__':
+    zc.buildout.buildout.main()

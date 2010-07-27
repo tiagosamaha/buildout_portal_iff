@@ -1,0 +1,11 @@
+Detailed installation log
+Starting at Ter Jul 27 19:51:23 BRT 2010
+Processing iniparse-0.3.1.tar.gz
+Running iniparse-0.3.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-cq-0ua/iniparse-0.3.1/egg-dist-tmp-4rS_Ql
+zip_safe flag not set; analyzing archive contents...
+Adding iniparse 0.3.1 to easy-install.pth file
+
+Installed /home/herman/develop/Plone/Python-2.4/lib/python2.4/site-packages/iniparse-0.3.1-py2.4.egg
+Processing dependencies for iniparse==0.3.1
+Finished processing dependencies for iniparse==0.3.1
+Finished at Ter Jul 27 19:55:04 BRT 2010
