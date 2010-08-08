@@ -7,4 +7,4 @@ install:
 	./install.sh --password="senha_do_portal" zeo
 
 copy_scripts: startCluster.sh stopCluster.sh restartCluster.sh
-	cp startCluster.sh stopCluster.sh restartCluster.sh /home/herman/Plone/zeocluster
+	cp startCluster.sh stopCluster.sh restartCluster.sh /home/plone/Plone/zeocluster
