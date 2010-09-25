@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<object>
+
+  <order manager="plone.contentviews" skinname="iff.theme"
+         based-on="Plone Default">
+         <viewlet name="iff.campusnews" insert-after="plone.contetviews"/>
+     </order>
+
+  <order manager="plone.belowcontent" skinname="iff.theme"
+         based-on="Plone Default">
+         <viewlet name="iff.tagcloud" insert-after="plone.nextprevious"/>
+  </order>
+
+
+ <hidden manager="plone.portaltop" skinname="iff.theme" based-on="Plone Default">
+  <viewlet name="plone.personal_bar" />
+ </hidden>
+
+</object>

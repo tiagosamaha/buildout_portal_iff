@@ -1,0 +1,188 @@
+.portletHeader {
+    margin-bottom:1em;
+    text-transform:none;
+}
+
+/*.portletHeader a span{
+    background-color:white;
+    border-bottom:1px solid white;
+    margin-bottom:-1px;
+    margin-left: 1em ;
+    
+}*/
+.portletHeader a, .portletHeader span {
+    background-color: white;
+    border-bottom:1px solid white;
+    bottom:-5px;
+    position:relative;
+    font-size: large;
+    padding:0;
+    left: 5px;
+}
+
+.portletHeader a span {
+    left: 0;
+    bottom: 0;
+}
+
+.portletItem {
+    border: 0px solid transparent !important;
+    background-color: transparent !important;
+}
+
+.portletItem dd{
+    border: 0px solid transparent !important;
+    background-color: transparent !important;
+}
+
+.documentEditable {
+    border: 0px;
+    border-left:1px solid #CCCCCC;
+    margin-left:1em;
+    padding-left:1em;
+}
+.documentVisible {
+    border: 0px;
+    border-left:1px solid #CCCCCC;
+    margin-left:1em;
+    padding-left:1em;
+}
+
+
+#portal-columns {
+    padding:10px  !important;
+}
+
+#portal-header-focus {
+    background-color: #f1f1f1;
+}
+
+#portal-header-focus div.visualPadding {
+    background-color: white;
+    border:1px solid #CCCCCC;
+    margin:10px;
+    height:240px;
+    padding:1em;
+}
+
+tr.newsfocusitem td {
+    padding-left:2em;
+    padding-right:2em;
+    vertical-align: top;
+    width:50%;
+}
+
+tr.newsfocusitem td a {
+    border-color:transparent transparent #F1F1F1;
+    border-style:solid;
+    border-width:0 0 1px;
+    color:#669933;
+    display:block;
+    text-decoration: none;
+    font-size:1.3em;
+    font-weight:bold;
+}
+
+.portlet {
+    margin: 1px 0 3em;
+}
+
+.portletHeader, .managedPortlet .portletHeader {
+    background-color: transparent;
+    border-color: transparent transparent #AAAAAA;
+    border-style: solid;
+    border-width: 0 0 1px;
+}
+
+.portletHeader a, .managedPortlet .portletHeader a {
+    font-size: 1.5em;
+    padding:0;
+}
+
+.portletHeader img, .managedPortlet .portletHeader img {
+    float:left;
+    margin-left:-20px;
+    margin-top:-10px;
+}
+
+legend {
+    margin-bottom: 1em;
+    padding: 0;
+    font-size: 1.6em;
+}
+
+
+#news table {
+    width:100%;
+}
+.campus_news {
+    vertical-align: top;
+    width: 33%;
+}
+
+.campus_news p.campus {
+    background:transparent url(unidades.gif) no-repeat scroll 0 0;
+    display:inline;
+    font-size:12px;
+    height:22px;
+    padding-left:25px;
+    padding-right:0.5em;
+    padding-top:5px;
+    padding-bottom:4px;
+    line-height:26px;
+}
+
+.campus_news a {
+    text-decoration: none;
+    color:#666666;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.campus_news p.date {
+    display:inline;
+    margin-top:7px;
+    font-size:0.7em;
+}
+
+#container_default1 {
+    float: left;
+}
+
+
+#news {
+    border-color:#CCCCCC;
+    border-style:solid;
+    border-width:1px 0;
+    line-height:1.5em;
+    margin:1em 0;
+    padding:0 1em 1em;
+    width:auto;
+}
+
+.portletFooter {
+    border:0px solid transparent;
+    background-color: transparent;
+}
+.portletFooter a {
+    color: #CC0000 !important;
+    display:block;
+    margin-bottom:-6px;
+}
+
+a.mais {
+    color: #CC0000 !important;
+    float: right;
+    text-decoration: none;
+}
+#rssnews{
+   float:right;
+   margin-top:-4.2em;
+}
+.rssportlet{
+   float:left;
+}
+.portletNavigationTree .portletHeader a{
+    background-color:transparent !important;
+    border-bottom:1px solid transparent !important;
+}

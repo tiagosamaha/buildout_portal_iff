@@ -1,0 +1,59 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="vaporisation">
+
+    <five:registerPackage package="." />
+    
+    <genericsetup:registerProfile
+       name="vaporisation"
+       title="Vaporisation tagcloud"
+       directory="profiles/default"
+       description="A static tagcloud product with a topic navigation"
+       provides="Products.GenericSetup.interfaces.EXTENSION"
+       />
+ 
+     <!-- Register the portlet -->
+     <plone:portlet
+         name="vaporisation.tagcloud"
+         interface=".interfaces.IVaporizedCloud"
+         assignment=".cloud.Cloud"
+         view_permission="zope2.View"
+         edit_permission="cmf.ManagePortal"
+         renderer=".render.Renderer"
+         addview=".add.AddForm"
+         editview=".edit.EditForm"
+         />
+
+     <!-- The result page. Copied from the Plone template. -->
+     <browser:page
+	 for="*"
+	 name="cloud_search"
+	 template="browser/search.pt"
+	 permission="zope2.View"
+	 />
+
+     <!-- The vocabularies for the forms -->
+     <utility
+	 name="vaporisation.keywords"
+	 component=".vocabularies.KeywordVocabularyFactory"
+	 />
+
+     <!-- Register the adapter for the cloud -->
+     <adapter factory=".adapter.Steamer" />
+
+     <!-- Events registration -->
+     <subscriber
+	 for=".interfaces.IVaporizedCloud
+	      .interfaces.ITreeUpdateEvent"
+	 handler=".events.UpdateTreeOnCloudChanges"
+	 />
+
+     <!-- Translations -->
+     <i18n:registerTranslations directory="locales"/>
+
+</configure>

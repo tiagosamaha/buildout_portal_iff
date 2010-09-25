@@ -1,0 +1,94 @@
+/* CSS Document */
+#folderview dt.portletHeader{
+      text-align:center;
+      word-wrap:  break-word;
+}
+
+#folderview dl.collapsible{
+      margin-top:1px;
+}
+
+#folderview p{
+      text-align:center
+}
+
+#folderview p.discreet.folder_info{
+      margin:1px;
+      padding:1px;
+      font-size:7pt;
+      text-align:right;
+}
+
+#folderview dl.portlet{
+      float:left; ! important;
+      margin: 5px;
+      width:  31%;
+}
+
+#folderview dd.portletItem.folder_content{
+      
+}
+
+#folderview ul.folderlist{
+      list-style-type: none;
+      list-style-image: none;
+      margin: 0 0;
+      margin-left:2px;
+      overflow:hidden;      
+}
+
+#folderview{
+      width:100%;
+      text-align:center;
+}
+
+#folderview p.mini{
+      text-align:left;
+}
+
+#folderview p.discreet.mini{
+      text-align:left;
+}
+
+#folderview #innerfolderview{
+      margin: 0px auto;
+      text-align:left;
+}
+
+div#folderview a.discreet{
+      color:grey;
+      text-align:center;
+}
+
+div#folderview li{
+      text-decoration:none; ! important;
+      background:none;
+}
+div#folderview a.special_link{
+      text-decoration:none;
+      background:none;
+      text-transform: lowercase;
+      padding:0px;
+}
+
+div#folderview img.file_special_link{
+      width:14px;
+      height:14px;
+}
+
+
+div#folderview div.info_container{
+      display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

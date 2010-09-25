@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Vaporisation\n"
+"POT-Creation-Date: 2006-12-12 16:08+0100\n"
+"PO-Revision-Date: 2006-12-12 16:08+0100\n"
+"Last-Translator: Souheil CHELFOUH <souheil@pilotsystems.net>\n"
+"Language-Team: Souheil CHELFOUH <souheil@pilotsystems.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: fr\n"
+"Language-Name: Français\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: vaporisation\n"
+"X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
+
+# view.py
+msgid "The entire cloud has been updated."
+msgstr "Le nuage entier a été mis à jour."
+
+msgid "The keywords list has been updated."
+msgstr "Les mots clefs ont été mis à jour."
+
+msgid  "no_related_tags"
+msgstr "Aucun mot clef connexe"
+
+msgid  "joint_navigation"
+msgstr "Navigation cumulative basée sur les mots clefs (cliquer pour enlever):"
+
+msgid  "normal_navigation"
+msgstr "Recherche active :"
+
+msgid  "Cloud preferences"
+msgstr "Préférences de la vaporisation"
+
+msgid  "The fields below allow you to customize your cloud."
+msgstr "Les champs ci-dessous servent à la personalisation de votre nuage."
+
+msgid  "Number of different sizes"
+msgstr "Nombre de tailles différentes"
+
+msgid  "This number will also determine the biggest size."
+msgstr "Ce chiffre déterminera aussi la taille du plus gros mot clef."
+
+msgid  "Activate joint navigation"
+msgstr "Activer la navigation cumulative"
+
+msgid  "Joint navigation puts keywords together for associative searches."
+msgstr "La navigation cumulative associe en une seule recherche des mots clefs connexes."
+
+msgid  "Restrict the cloud keywords by removing these keywords"
+msgstr "Restreindre le nuage en enlevant les mots clefs suivants"
+
+msgid  "Remove from keywords list"
+msgstr "Retirer de la liste des mots clefs"
+
+msgid  "Changes saved and tagcloud updated."
+msgstr "Changements sauvegardés et nuage mis à jour."
+
+msgid  "No changes."
+msgstr "Aucun changements."
+
+msgid  "save"
+msgid  "Save"
+msgid  "label_save"
+msgstr "Mettre à jour"
+
+msgid  "Number of tags to display"
+msgstr "Nombre de mots clefs à afficher"
+
+msgid  "Zero displays it all."
+msgstr "Zéro affichera tous les mots clefs."
+
+msgid  "Cloud advanced configuration"
+msgstr "Configuration avancée du nuage"
+
+msgid  "cloud_mouse_details"
+msgstr "Garder la souris sur l'élément pour afficher le nombre d'occurences"
+
+msgid  "Name to display"
+msgstr "Nom à afficher"
+
+msgid  "The name of the tagcloud. For display purposes."
+msgstr "Le nom du nuage de tags. Utilisé pour l'affichage."
+
+msgid  "Vaporisation tagcloud"
+msgstr "Nuage de tags Vaporisation"
+
+msgid  "Customizable tagcloud portlet"
+msgstr "Portlet nuage de tags configurable"
+
+msgid  "A portlet that displays a cloud of tags to browser through"
+msgstr "Un portlet qui affiche un nuage de tags permettant une navigation thématique"

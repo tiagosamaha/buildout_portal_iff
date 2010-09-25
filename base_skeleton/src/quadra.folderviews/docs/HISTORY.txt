@@ -1,0 +1,9 @@
+Changelog for quadra.folderviews
+
+    (name of developer listed in brackets)
+
+quadra.folderviews - 2.0 Unreleased
+
+    - Initial package structure.
+      [zopeskel]
+

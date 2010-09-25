@@ -1,0 +1,19 @@
+# Gettext Message File for quadra.folderviews
+msgid ""
+msgstr ""
+"Project-Id-Version: quadra.folderviews\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: quadra.folderviews\n"
+
+#: browser/folderview.pt:28
+msgid "no_folder_found"
+msgstr ""
+
+#: browser/folderview.pt:38 :57
+msgid "nothing_found"
+msgstr ""

@@ -1,0 +1,73 @@
+<dl class="portlet"
+    i18n:domain="vaporisation"
+    tal:attributes="id string:portlet-${context/getId}"
+    tal:define="joint view/isJointNavigation;
+		currents view/currentSubjects;
+		removable view/removableTags;">
+
+  <dt class="portletHeader">
+    <span class="portletTopLeft"></span>
+    <a class="tile"
+       href=""
+       tal:content="view/Title"
+       tal:attributes="href string:${view/portal_url}/search">
+      Cloud name
+    </a>
+    <span class="portletTopRight"></span>
+  </dt>
+
+  <dd class="portletItem"
+      tal:define="tags view/getVaporizedCloud;
+		  link view/getLinkPath;">
+    <div>
+      <span tal:condition="tags"
+	    tal:repeat="tag tags"
+	    class="vaporized-tag">
+	<a href=""
+	   tal:content="tag/name"
+	   tal:attributes="style string:font-size: ${tag/size}%;;;
+			   href string:${link}${tag/name};
+			   title string:${tag/name} (${tag/weight});" />
+      </span>
+    </div>
+    <p class="discreet"
+       i18n:translate="no_related_tags"
+       tal:condition="not: tags">No related tags</p>
+    
+    <div id="cloud-footer">&nbsp;</div>
+  </dd>
+
+  <dd class="portletFooter"
+      tal:condition="python: (removable and joint) or
+		             (currents and not joint)">
+
+    <tal:joint condition="python: joint and removable">
+      <p class="discreet"
+	 i18n:translate="joint_navigation">
+	Joint navigation based on tags (click to remove) :
+      </p>
+      <tal:tag repeat="tag removable">
+	<a href="" tal:content="tag/name" tal:attributes="href tag/link"/>
+	<tal:separator condition="not: repeat/tag/end">
+	  &bull;
+	</tal:separator>
+      </tal:tag>
+    </tal:joint>
+
+    <tal:joint condition="not: joint">
+      <tal:browsing tal:condition="currents">
+	<p class="discreet"
+	   i18n:translate="normal_navigation">
+	  Actually searching on :
+	</p>
+	<tal:tag repeat="tag currents">
+	  <strong tal:content="tag" />
+	</tal:tag>
+      </tal:browsing>
+    </tal:joint>
+
+    <span class="portletBottomLeft"></span>
+    <span class="portletBottomRight"></span>
+  </dd>
+
+</dl>

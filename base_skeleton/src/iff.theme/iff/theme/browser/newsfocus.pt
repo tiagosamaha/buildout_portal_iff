@@ -1,0 +1,38 @@
+<table
+    tal:define="news view/news;"
+    tal:condition="news"
+    id='newsfocus'>
+        <tr class='newsfocusitem' >
+          <td tal:condition="python: news.get(0, None)">
+            <a  tal:content="python:news[0].Title"
+                tal:attributes="href python:news[0].getURL()">
+                    Title
+            </a>
+            <p tal:content="python:news[0].Description">Description of the News</p>
+          </td>
+          <td tal:condition="python: news.get(1, None)">
+            <a tal:content="python:news[1].Title"
+                tal:attributes="href python:news[1].getURL()">
+                Title
+            </a>
+            <p tal:content="python:news[1].Description">Description of the News</p>
+          </td>
+        </tr>
+        <tr class='newsfocusitem' >
+          <td tal:condition="python: news.get(2, None)">
+            <a tal:content="python:news[2].Title"
+                tal:attributes="href python:news[2].getURL()">
+                Title
+            </a>
+            <p tal:content="python:news[2].Description">Description of the News</p>
+          </td>
+          <td tal:condition="python: news.get(3, None)">
+            <a tal:content="python:news[3].Title"
+                tal:attributes="href python:news[3].getURL()">
+                Title
+            </a>
+            <p tal:content="python:news[3].Description">Description of the News</p>
+          </td>
+        </tr>
+</table>
+<a href="search" class="mais" tal:attributes="href view/link" >Mais...</a>

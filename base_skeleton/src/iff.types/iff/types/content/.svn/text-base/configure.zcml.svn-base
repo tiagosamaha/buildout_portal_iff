@@ -1,0 +1,76 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="iff.types">
+
+    <!-- configure your content components here -->
+
+    <!-- -*- extra stuff goes here -*- -->
+    <class class=".arteecultura.ArteeCultura">
+
+        <require
+            permission="zope2.View"
+            interface="..interfaces.IArteeCultura"
+            />
+
+        <require
+            permission="cmf.ModifyPortalContent"
+            set_schema="..interfaces.IArteeCultura"
+            />
+
+    </class>
+    <class class=".informes.Informes">
+
+        <require
+            permission="zope2.View"
+            interface="..interfaces.IInformes"
+            />
+
+        <require
+            permission="cmf.ModifyPortalContent"
+            set_schema="..interfaces.IInformes"
+            />
+
+    </class>
+    <class class=".chamada.Chamada">
+
+        <require
+            permission="zope2.View"
+            interface="..interfaces.IChamada"
+            />
+
+        <require
+            permission="cmf.ModifyPortalContent"
+            set_schema="..interfaces.IChamada"
+            />
+
+    </class>
+    <class class=".processoseletivo.ProcessoSeletivo">
+
+        <require
+            permission="zope2.View"
+            interface="..interfaces.IProcessoSeletivo"
+            />
+
+        <require
+            permission="cmf.ModifyPortalContent"
+            set_schema="..interfaces.IProcessoSeletivo"
+            />
+
+    </class>
+    <class class=".portlet_container.PortletContainer">
+
+        <require
+            permission="zope2.View"
+            interface="..interfaces.IPortletContainer"
+            />
+
+        <require
+            permission="cmf.ModifyPortalContent"
+            set_schema="..interfaces.IPortletContainer"
+            />
+
+    </class>
+
+
+</configure>

@@ -1,0 +1,115 @@
+8
+
+dir
+3119
+svn://web.cefetcampos.br/nsi/iff.types/trunk/iff/types
+svn://web.cefetcampos.br/nsi
+
+
+
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9d2f8bd7-994e-479c-a194-428141c433ca
+
+README.txt
+file
+
+
+
+
+2008-10-09T14:43:25.000000Z
+aa3b8b500d159873d07166a03bbb5a09
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+__init__.py
+file
+
+
+
+
+2008-10-08T17:07:17.000000Z
+ededfa747d80fbf5b016f055755a19f4
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+browser
+dir
+
+config.py
+file
+
+
+
+
+2008-10-10T17:11:41.000000Z
+9df9b6ac08a466d0e5620ec6f8024555
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+configure.zcml
+file
+
+
+
+
+2008-10-08T17:07:17.000000Z
+1ce8e75af28851884a7057b0a2a0c938
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+content
+dir
+
+interfaces.py
+file
+
+
+
+
+2008-10-10T17:18:31.000000Z
+06f4c190976f2b47baf37e511ebbddae
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+portlets
+dir
+
+profiles
+dir
+
+tests
+dir
+
+tests.py
+file
+
+
+
+
+2008-10-08T17:07:17.000000Z
+322b182b57dcce1551f21d77402d3db1
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+

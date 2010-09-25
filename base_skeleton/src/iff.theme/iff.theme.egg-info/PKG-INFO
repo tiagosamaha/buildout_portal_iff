@@ -1,0 +1,27 @@
+Metadata-Version: 1.0
+Name: iff.theme
+Version: 0.1dev
+Summary: An installable theme for Plone 3.0
+Home-page: http://iff.edu.br
+Author: Gustavo Rezende, Diego Pinheiro, Ronaldo Amaral
+Author-email: <nsigustavo@gmail.com>, <dmpinheiro@gmail.com>, <ronaldinho.as@gmail.com>
+License: GPL
+Description: Introduction
+        ============
+        
+        
+        
+        Changelog
+        =========
+        
+        0.1 - Unreleased
+        ----------------
+        
+        * Initial release
+        
+        
+Keywords: iff theme zope plone web nsi
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

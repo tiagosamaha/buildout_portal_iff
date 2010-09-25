@@ -1,0 +1,52 @@
+8
+
+dir
+3119
+svn://web.cefetcampos.br/nsi/iff.types/trunk/iff/types/tests
+svn://web.cefetcampos.br/nsi
+
+
+
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9d2f8bd7-994e-479c-a194-428141c433ca
+
+__init__.py
+file
+
+
+
+
+2008-10-08T17:07:17.000000Z
+552dacb15f2019c8f3f74c55befa242c
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+doc_tests.py
+file
+
+
+
+
+2008-10-08T17:07:17.000000Z
+322b182b57dcce1551f21d77402d3db1
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+

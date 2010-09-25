@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="iff.theme">
+
+     <plone:portlet
+         name="iff.theme.SearchPortletConfiguration"
+         interface=".searchportletconfiguration.ISearchPortletConfiguration"
+         assignment=".searchportletconfiguration.Assignment"
+         view_permission="zope2.View"
+         edit_permission="cmf.ManagePortal"
+         renderer=".searchportletconfiguration.Renderer"
+         addview=".searchportletconfiguration.AddForm"
+         />
+
+</configure>

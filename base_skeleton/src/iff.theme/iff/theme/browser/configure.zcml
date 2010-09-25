@@ -1,0 +1,82 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="iff.theme">
+
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="iff.theme"
+      />
+
+  <browser:viewletManager
+     name="iff.headerfocus"
+     provides=".interfaces.IHeaderFocusViewletManager"
+     layer=".interfaces.IThemeSpecific"
+     class=".viewletmanager.HeaderFocusViewletManager"
+     permission="zope2.View"
+     />
+
+  <browser:viewletManager
+     name="iff.newsviewletmanager"
+     provides=".interfaces.INewsViewletManager"
+     layer=".interfaces.IThemeSpecific"
+     class=".viewletmanager.NewsViewletManager"
+     permission="zope2.View"
+     />
+
+  <!-- Viewlets registration -->
+
+    <browser:viewlet
+        name="iff.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        permission="zope2.View"
+        />
+
+  <browser:viewlet
+      name="iff.imagefocus"
+      manager="iff.theme.browser.viewletmanager.HeaderFocusViewletManager"
+      class=".viewlets.ImageFocusViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View"
+      />
+  <browser:viewlet
+      name="iff.newsfocus"
+      manager=".interfaces.IHeaderFocusViewletManager"
+      class=".viewlets.NewsFocusViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View"
+      />
+  <browser:viewlet
+      name="iff.campusnews"
+      manager=".interfaces.INewsViewletManager"
+      class=".viewlets.NewsViewlet"
+      layer=".interfaces.IThemeSpecific"
+      for="Products.CMFCore.interfaces._content.ISiteRoot"
+      permission="zope2.View"
+      />
+  <browser:viewlet
+      name="iff.tagcloud"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      class=".viewlets.TagCloudViewlet"
+      layer=".interfaces.IThemeSpecific"
+      for="Products.CMFCore.interfaces._content.ISiteRoot"
+      permission="zope2.View"
+      />
+
+  <!-- Zope 3 browser resources -->
+
+  <browser:resourceDirectory
+      name="iff.theme.images"
+      directory="images"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <browser:resourceDirectory
+      name="iff.theme.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+</configure>

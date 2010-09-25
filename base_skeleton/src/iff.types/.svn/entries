@@ -1,0 +1,109 @@
+8
+
+dir
+3118
+svn://web.cefetcampos.br/nsi/iff.types/trunk
+svn://web.cefetcampos.br/nsi
+
+
+
+2008-11-13T11:09:05.227932Z
+3118
+ronaldo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9d2f8bd7-994e-479c-a194-428141c433ca
+
+CHANGES.txt
+file
+3119
+
+
+
+2008-10-08T17:07:17.000000Z
+1c6adb2012bff44bce9461d4da467195
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+CONTRIBUTORS.txt
+file
+3119
+
+
+
+2008-10-08T17:07:17.000000Z
+6db58c52283a986e9097fc8fd513962b
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+MANIFEST.in
+file
+3119
+
+
+
+2008-10-08T17:07:17.000000Z
+1578c2a00baf5820987c7f31c9637648
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+README.txt
+file
+3119
+
+
+
+2008-10-08T17:07:17.000000Z
+cad8b67ac99b299b02698fdf5f80964f
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+docs
+dir
+
+iff
+dir
+
+iff.types.egg-info
+dir
+
+setup.cfg
+file
+3119
+
+
+
+2008-10-08T17:07:17.000000Z
+fcbd29c06dd58285a88397676a5623ca
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+
+setup.py
+file
+3119
+
+
+
+2008-10-08T17:07:17.000000Z
+b6e8667e3a5d1e25d550b1b5770b6a33
+2008-11-13T11:09:16.414068Z
+3119
+ronaldo
+

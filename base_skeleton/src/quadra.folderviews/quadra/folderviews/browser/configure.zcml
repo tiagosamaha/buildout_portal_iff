@@ -1,0 +1,40 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="quadra.folderviews">
+   <include package="plone.app.contentmenu" />
+
+    <!-- 'Quadra Folderview' Zope 3 browser layer -->
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Quadra Folderview"
+        />
+        
+    <browser:resource
+        name="quadra-folderportlet.css"
+        file="stylesheets/folderportlet.css"
+        />
+        
+    <browser:resource
+        name="itemDescriptionBubble.js"
+        file="scripts/itemDescriptionBubble.js"
+        />
+        
+    <browser:resource
+        name="direct_view_icon.png"
+        image="images/direct_view_icon.png"
+        />    
+        
+          
+    <browser:page
+      for="Products.ATContentTypes.interface.IATFolder"
+      name="Porlet-like-View"
+      template="folderview.pt"
+      class=".folderview.PortletFolderView"
+      permission="zope2.View"
+      />
+    
+
+
+</configure>

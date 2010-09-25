@@ -1,0 +1,137 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="quadra.folderviews">
+      
+<head>
+      
+    <metal:css fill-slot="css_slot">
+     <style type="text/css" media="all"
+           tal:content="string: @import url(${context/++resource++quadra-folderportlet.css});" href=""></style>
+    </metal:css>
+    
+    <metal:javascript fill-slot="javascript_head_slot">
+     <script type="text/javascript" media="all"
+          tal:attributes="src python:here.portal_url()+'/++resource++itemDescriptionBubble.js'"></script>
+    </metal:javascript>
+    
+
+      
+</head>
+<body>
+    
+    <div id="folderview" metal:fill-slot="main" tal:define="kssClassesView context/@@kss_field_decorator_view;
+                                  getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;">
+      
+    <div id="innerfolderview">   
+        <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view"></h1>
+        
+        <tal:foldercontent define="index string:portal_type;
+                                   type string:Folder;
+                                   folders python:view.getFolderContentsUpgrade(index,type);">
+          <p class="discreet" tal:condition="not:folders" i18n:translate="no_folder_found">This folder doesn't contain any subfolder.</p>
+          <tal:folder repeat="folder folders">
+          <dl class="portlet" tal:define="path python:folder.getPath();
+                                          content python:view.getFolderInnerContent(path);">
+           <dt class="portletHeader">
+            <a tal:attributes="href folder/getURL;title folder/Title;class python:'state-'+folder['review_state']">
+            <tal:title content="folder/Title"></tal:title>
+            <span class="discreet folder_info" tal:condition="content">(<tal:count tal:content="python:len(content)"/>)</span>
+            </a>
+           </dt>
+           <dd class="portletItem folder_content">
+             <p class="discreet" tal:condition="not:content" i18n:translate="nothing_found">This folder doesn't contain any document.</p>                           
+              <ul class="folderlist">
+               <tal:loop repeat="folderitem python:content[:5]"> 
+                <li tal:define="number python:repeat['folderitem'].number();
+                                title python:folder['Title'];
+                                show python:'';
+                                hide python:'';">
+                  <a tal:attributes="href python:view.LinkGenerator(folderitem);
+                        title folderitem/Description;
+                        class python:'state-'+folderitem['review_state'];
+                        ">
+                  <img tal:replace="structure python:plone_view.getIcon(folderitem).html_tag()" width="16" height="16" alt="Document" src=""/>
+                    <tal:title content="folderitem/Title"></tal:title>
+                  </a>
+                  <a class="special_link"
+                      target="_blank"
+                      tal:attributes="href python:view.SpecialTypeLinkGenerator(folderitem)"
+                      tal:condition="python:view.SpecialTypeLinkGenerator(folderitem)">
+                      <img class="file_special_link" tal:attributes="src string:${portal_url}/++resource++direct_view_icon.png;"/>
+                      </a>
+                  <a class="special_link"
+                      target="_blank"
+                      tal:attributes="href python:folderitem.getURL()+'/external_edit'"
+                      tal:condition="python:view.IsExternalEditorAvailable(folderitem)">
+                      <img class="file_special_link" tal:attributes="src string:${portal_url}/extedit_icon.gif;"/>
+                      </a>
+                  <img class="file_special_link"
+                  tal:define="url python:str(folderitem.getURL());
+                              name python:str(folderitem.Title);"
+                  tal:attributes="onclick string:javascript:PopUpController('$url','$name');
+                                  src string:${portal_url}/++resource++direct_view_icon.png;"
+                  tal:condition="python:folderitem['portal_type'] == 'Image'"/>
+                </li>
+               </tal:loop>
+                 <tal:large_folder condition="python: len(content)>5">
+                 <p><a class="discreet" tal:attributes="href python:folder.getURL()">...</a></p>
+                 </tal:large_folder>
+              </ul>
+           </dd>
+          </dl>
+          <div class="visualClear" tal:condition="python:(repeat['folder'].number()) % 3 == 0"></div>
+          </tal:folder>
+        </tal:foldercontent>
+      
+        <tal:otherContent define="index python:'';
+                                  type python:'';
+                                  documents python:view.getFolderContentsUpgrade(index,type);">
+          <p class="discreet" tal:condition="not:documents" i18n:translate="nothing_found">This folder doesn't contain any document.</p> 
+          <dl class="portlet" tal:condition="documents">
+          <dt class="portletHeader">
+                 <span i18n:translate="documents">Documents</span>
+          </dt>
+          <dd class="portletItem">
+          <ul class="folderlist">
+                <tal:loop repeat="item documents"> 
+                <li tal:condition="python:item['portal_type'] != 'Folder'">
+                 <a tal:attributes="href python:view.LinkGenerator(item);title item/Description;class python:'state-'+item['review_state']">
+                    <img tal:replace="structure python:plone_view.getIcon(item).html_tag()" width="16" height="16" alt="Document" src=""/>
+                    <tal:title content="item/Title"></tal:title>
+                 </a> 
+                 <a class="special_link"
+                      target="_blank"
+                      tal:attributes="href python:view.SpecialTypeLinkGenerator(item)"
+                      tal:condition="python:view.SpecialTypeLinkGenerator(item)">
+                      <img class="file_special_link" tal:attributes="src string:${portal_url}/++resource++direct_view_icon.png;"/>
+                      </a>
+                 <a class="special_link"
+                      target="_blank"
+                      tal:attributes="href python:item.getURL()+'/external_edit'"
+                      tal:condition="python:view.IsExternalEditorAvailable(item)">
+                      <img class="file_special_link" tal:attributes="src string:${portal_url}/extedit_icon.gif;"/>
+                      </a>
+                     
+                  <img class="file_special_link"
+                  tal:define="url python:str(item.getURL());
+                              name python:str(item.Title);"
+                  tal:attributes="onclick string:javascript:PopUpController('$url','$name');
+                                  src string:${portal_url}/++resource++direct_view_icon.png;"
+                  tal:condition="python:item['portal_type'] == 'Image'"/>                      
+                 
+                </li>
+               </tal:loop>
+           </ul>
+          
+          </dd>
+       </dl>
+       </tal:otherContent>
+      <div class="VisualClear" style="clear:both;"></div>
+    </div>
+    </div>
+  
+</body>
+</html>
+

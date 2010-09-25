@@ -1,0 +1,49 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+
+<body>
+
+<!-- Perfil Portlet -->
+
+<div metal:define-macro="portlet">
+
+<dl class="portlet" id="portlet-perfil">
+
+    <dt class="portletHeader">
+        <div class="portletTopLeft"></div>
+        <div class="portletTopRight"></div>
+        <!-- <a href=""
+           class="tile" title="Escolha seu perfil para melhor navegação no Portal">Perfil
+         </a> -->
+    </dt>
+
+    <dd class="portletItem odd" >
+      <table align="center" class="perfils">
+        <tbody>
+          <tr>
+            <td><img class="imgLeft" src="aluno.gif" alt="Imagem Aluno"/></td>
+            <td><a href="./aluno" class="tile">Aluno</a>
+                <a href="./ex-aluno" class="tile">Ex-Aluno</a></td>
+            <td><img class="imgRight" src="exaluno.gif" alt="Imagem Ex-Aluno"/></td>
+          </tr>
+          <tr>
+            <td><img class="imgLeft" src="servidor.gif" alt="Imagem Servidor"/></td>
+            <td><a href="./servidor" class="tile">Servidor</a>
+                <a href="./empresa" class="tile">Empresa</a></td>
+            <td><img class="imgRight" src="empresa.gif" alt="Imagem Empresa"/></td>
+          </tr>
+        </tbody>
+      </table>
+        
+    </dd>
+    <div class="portletBottomLeft"></div>
+    <div class="portletBottomRight"></div>
+
+</dl>
+
+</div>
+
+</body>
+
+</html>

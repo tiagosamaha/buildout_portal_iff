@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="iff.types">
+
+  <div metal:fill-slot="main"
+       id="structured-document"
+       tal:define="kssClassesView context/@@kss_field_decorator_view;
+		           getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;">
+
+    <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+    <h1 class="documentFirstHeading">
+      <metal:field use-macro="python:context.widget('title', mode='view')">
+	Title
+      </metal:field>
+    </h1>
+
+    <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+    <p class="documentDescription" tal:condition="context/Description">
+      <metal:field use-macro="python:context.widget('description',
+			      mode='view')" />
+    </p>
+
+    <table id="structured-document-content">
+      <tr>
+	<td id="structured-document-portlets"
+	    tal:define="blocks provider:sd.blocks"
+	    tal:condition="blocks">
+	  <div tal:replace="structure blocks" />
+	</td>
+      </tr>
+    </table>
+    <div tal:replace="structure provider:plone.belowcontentbody" />
+  </div>
+</html>

@@ -1,0 +1,22 @@
+<!-- viewlet de noticias desenvolvido por Gustavo Rezende <nsigustavo@gmail.com> -->
+<fieldset id='news'
+    tal:define="newsList view/news">
+    <legend>Notícias</legend>
+    <a id="rssnews" alt="RSS Notícias" href="./rss-news/RSS"><img alt='RSS Notícias' title='RSS Notícias' src='rssnot.gif'/></a>
+       <table>
+       <tr tal:repeat="newsLine newsList">
+        <td class="campus_news"
+            tal:repeat="news newsLine">
+                <tal:block condition="news">
+                    <p class="campus" tal:content="news/campus">Campus</p>
+                    <p class="date" tal:content="news/date">Date</p><br/>
+                    <a  tal:content="news/title"
+                        tal:attributes="href news/url"
+                        >Title</a>
+                    <p tal:content="news/description">Description</p>
+              </tal:block>
+        </td>
+        </tr>
+        </table>
+        <a href="search" class="mais" tal:attributes="href view/link" >Mais...</a>
+</fieldset>
