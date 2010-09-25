@@ -1,0 +1,655 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+<dtml-var portlet_slideshow.css>
+
+/**************************** Defaults definitions **************/
+#imgSL{
+  border:solid 0px;
+}
+
+#chamadaLinks #txt1{
+  margin: 0px;
+  border: 0px solid #000;
+  height: 50px;
+}
+
+#credito {
+  font-size:60%;
+  color:#ddd;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+h1.titleconfig {
+  background-image: url(slideshow_icon.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 32px; }
+
+#imgslide{
+  width: 240px;
+  height: 190px;
+  margin-bottom: 7px;
+  margin-top: 0px;
+  border: solid 1px #000000 !important;
+  background: #fff;
+}
+
+#objflash{
+  display: none;
+  display: block !important;
+}
+
+.title{
+  font-weight: bold
+}
+
+/********************************************** Aura *************************************/
+
+#container_aura{
+  width: 255px;
+  border: 0px !important;
+  background: #012756 !important;
+  padding: 4px;
+  padding-top: 7px;
+  text-align: center;
+}
+
+#container_aura #credito {
+  font-size:60%;
+  color:#ff0;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+#container_aura #txt1{
+  margin: 0px 15px;
+  font-size: 11px;
+  color: #fff;
+}
+#container_aura a{
+  color: #ffffff !important;
+  text-decoration: none;
+}
+#painel-conteudo_aura{
+  display: none;
+  text-align: center;
+}
+
+#painel_aura h3{
+ font-size: 11px !important;
+ font-weight: bold !important;
+}
+#painel_aura h2 {
+  border: 0px;
+  border: none;
+  font-size:1em;
+  padding:0px;
+  margin:0px;
+}
+
+#prox-ant_aura{
+  width: 263px;
+  margin-top: -45px;
+  margin-left: -4px;
+  border: solid 0px red;
+}
+#proximo_aura{
+  text-align: right;
+  display: block;
+  margin-top: -58px;
+}
+#anterior_aura{
+  text-align: left;
+  display: block;
+}
+
+
+
+/********************************************** Simple *************************************/
+
+
+
+
+#container_simple{
+  width: 255px;
+  border: solid 2px #000000;
+  background: #ffffff;
+  padding: 4px;
+  padding-top: 7px;
+  text-align: center;
+}
+
+#container_simple #credito{
+  font-size:60%;
+  color:#ccc;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+#container_simple #txt1{
+  margin: 0px 15px;
+  font-size: 11px !important;
+
+}
+#container_simple a{
+  color: #000000 !important;
+  text-decoration: none;
+}
+#painel-conteudo_simple{
+  display: none;
+  text-align: center;
+}
+
+#painel_simple h3{
+ font-size:11px;
+ font-weight: bold !important;
+}
+#painel_simple h2 {
+  border: 0px;
+  border: none;
+  font-size:1em;
+  padding:0px;
+  margin:0px;
+}
+
+#prox-ant_simple{
+  width: 263px;
+  margin-top: -15px;
+  margin-left: -4px;
+  border: solid 0px red;
+}
+#proximo_simple{
+  text-align: right;
+  display: block;
+  margin-top: -18px;
+}
+#anterior_simple{
+  text-align: left;
+  display: block;
+}
+
+
+/********************************************** Default1 *************************************/
+
+
+#container_default1{
+  width: 255px;
+  border: solid 2px #8cacbb;
+  background: url(&dtml-portal_url;/skins/default1/default_degrade.jpg) repeat-x #a3bec9;
+  padding: 4px;
+  padding-top: 7px;
+  text-align: center;
+}
+
+#container_default1 #credito {
+  font-size:60%;
+  color:#8CACBB;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+#container_default1 #txt1{
+  margin: 0px 15px;
+  font-size: 11px !important;
+
+}
+#container_default1 a{
+  color: #000000;
+  text-decoration: none;
+}
+#painel-conteudo_default1{
+  display: none;
+  text-align: center;
+}
+
+#painel_default1 h3{
+ font-size:1em;
+}
+#painel_default1 h2 {
+ border: 0px;
+ border: none;
+ font-size:1em;
+ padding:0px;
+ margin:0px;
+}
+
+#prox-ant_default1{
+  margin-top: -15px;
+  border: solid 0px red;
+}
+#proximo_default1{
+  text-align: right;
+  display: block;
+  margin-top: -18px;
+}
+#anterior_default1{
+  text-align: left;
+  display: block;
+}
+
+
+
+/********************************************** Default2 *************************************/
+#container_default2{
+  width: 255px;
+  border: solid 3px #8cacbb;
+  background: url(&dtml-portal_url;/skins/default2/degrade_default2.jpg) repeat-x #dee7ec;
+  padding: 4px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+#container_default2 #credito{
+  font-size:60%;
+  color:#6BA5BF;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+#container_default2 a{
+  color: #000000;
+  text-decoration: none;
+}
+
+#painel-conteudo_default2{
+  display: none;
+  text-align: center;
+}
+
+#painel_default2 h3{
+  font-size: 11px !important;
+}
+#painel_default2 h2 {
+ border: 0px;
+ border: none;
+ font-size:1em;
+ padding:0px;
+ margin:0px;
+}
+
+#prox-ant_default2{
+  margin-top: -15px;
+  border: solid 0px red;
+}
+#proximo_default2{
+  text-align: right;
+  display: block;
+  margin-top: -18px;
+}
+#anterior_default2{
+  text-align: left;
+  display: block;
+}
+
+/********************************************** Blue *************************************/
+#container_blue{
+  width: 256px;
+  border: solid 3px #dee7ec;
+  background: url(&dtml-portal_url;/skins/blue/degrade_blue.jpg) repeat-x #8cacbb;
+  padding: 4px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+#container_blue #credito{
+  font-size:60%;
+  color:#DEE7EC;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+
+#container_blue a{
+  color: #000000;
+  text-decoration: none;
+}
+#painel-conteudo_blue{
+  display: none;
+  text-align: center;
+}
+
+#painel_blue h3{
+  font-size: 11px !important;
+}
+#painel_blue h2 {
+ border: 0px;
+ border: none;
+  font-size: 11px !important;
+ padding:0px;
+ margin:0px;
+}
+#prox-ant_blue{
+  margin-top: -15px;
+  border: solid 0px red;
+}
+#proximo_blue{
+  text-align: right;
+  display: block;
+  margin-top: -18px;
+}
+#anterior_blue{
+  text-align: left;
+  display: block;
+}
+
+/********************************************** Brown *************************************/
+#container_brown{
+  width: 255px;
+  border: solid 4px #502d16;
+  background: #a05a2c;
+  padding: 4px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+#container_brown #credito{
+  font-size:60%;
+  color:#502D16;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+#container_brown a{
+  color: #000;
+  text-decoration: none;
+}
+#painel-conteudo_brown{
+  display: none;
+  text-align: center;
+}
+
+#painel_brown h3{
+  font-size: 11px !important;
+}
+#painel_brown h2 {
+ border: 0px;
+ font-size:1em;
+ padding:0px;
+ margin:0px;
+}
+
+#prox-ant_brown{
+  padding: 1px 5px ;
+  background: url(&dtml-portal_url;/skins/brown/brown_logo.png) 50% 0% no-repeat #502d16;
+  margin: 0px;
+  margin-top: 3px;
+  border: 0px ;
+  width: 244px;
+}
+#proximo_brown{
+  text-align: right;
+  display: block;
+  margin-top: -17px;
+}
+#anterior_brown{
+  text-align: left;
+  display: block;
+}
+
+/********************************************** Dark Blue *************************************/
+#container_dark_blue{
+  width: 255px;
+  border: solid 4px #004455;
+  background: #0088aa;
+  padding: 4px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+#container_dark_blue #credito{
+  font-size:60%;
+  color:#004455;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+
+#container_dark_blue a{
+  color: #000000;
+  text-decoration: none;
+}
+#painel-conteudo_dark_blue{
+  display: none;
+  text-align: center;
+}
+#painel_dark_blue h3{
+  font-size: 11px !important;
+}
+#painel_dark_blue h2 {
+ border: 0px;
+ border: none;
+ font-size:1em;
+ padding:0px;
+ margin:0px;
+}
+#prox-ant_dark_blue{
+  padding: 2px 5px ;
+  background: url(&dtml-portal_url;/skins/dark_blue/dark_degrade.jpg) repeat-x #004455;
+  margin: 0px;
+  margin-top: 3px;
+  border: 0px ;
+  width: 245px;
+}
+#proximo_dark_blue{
+  text-align: right;
+  display: block;
+  margin-top: -17px;
+}
+#anterior_dark_blue{
+  text-align: left;
+  display: block;
+}
+
+/********************************************** Violet *************************************/
+#container_violet{
+  width: 255px;
+  height: 250px;
+  border: solid 3px #440055;
+  background: url(&dtml-portal_url;/skins/violet/degrade_violet.jpg) repeat-x #440055;
+  padding: 4px;
+  padding-top: 34px;
+  text-align: center;
+  display: block;
+}
+
+#container_violet #credito{
+  display:none;
+}
+
+#container_violet a{
+  color: #ffffff !important;
+  text-decoration: none;
+}
+#painel-conteudo_violet{
+  display: none;
+  text-align: center;
+}
+
+#container_violet #txt1{
+  margin: 0px 15px;
+  font-size: 11px;
+  color: #fff;
+}
+
+
+#painel_violet h3{
+  font-size: 11px !important;
+}#imgslide{
+  width: 240px;
+  height: 190px;
+  margin-bottom: 7px;
+  margin-top: 0px;
+  border: solid 1px #000000 !important;
+  background: #fff;
+}
+
+#painel_violet h2 {
+ border: 0px;
+ border: none;
+  font-size: 11px !important;
+ padding:0px;
+ margin:0px;
+}
+
+#prox-ant_violet{
+  height: 18px;
+  padding: 2px 5px;
+  background: #440055;
+  margin: 0px;
+  margin-top: -278px;
+  margin-left: 7px !important;
+  border: 0px ;
+  width: 233px;
+}
+#proximo_violet{
+  text-align: right;
+  display: block;
+  margin-top: -13px;
+}
+#anterior_violet{
+  text-align: left;
+  display: block;
+}
+
+
+/********************************************** Silver1 *************************************/
+#container_silver1{
+  width: 255px;
+  border: solid 2px #777777;
+  background: #cccccc;
+  padding: 4px;
+  padding-top: 6px;
+  text-align: center;
+}
+#container_silver1 #credito{
+  font-size:60%;
+  color:#777777;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+#container_silver1 a{
+  color: #000000;
+  text-decoration: none;
+}
+#painel-conteudo_silver1{
+  display: none;
+  text-align: center;
+}
+#chamadaLinks_silver1 #txt1{
+  margin-bottom: 0px;
+  margin-left: 10px; 
+  font-size: 11px !important;
+}
+#painel_silver1 h3{
+  font-size: 11px !important;
+}
+#painel_silver1 h2 {
+  border: 0px;
+  border: none;
+  font-size:1em;
+  padding:0px;
+  margin:0px;
+  font-size: 11px !important;
+}
+#prox-ant_silver1{
+  padding: 1px 5px !important;
+  background: #777777 !important;
+  margin: 0px;
+  margin-top: 3px;
+  border: 0px ;
+  width: 246px;
+}
+#proximo_silver1{
+  text-align: right;
+  display: block;
+  margin-top: -18px;
+}
+#anterior_silver1{
+  text-align: left;
+  display: block;
+}
+
+/********************************************** IFF Slide Show *************************************/
+/*** 255px ***/
+#container_iff{
+  width: 215px;
+  background-color:white;
+  text-align: center;
+  float:left;
+  border: 1px solid #CCCCCC;
+}
+#container_iff #imgslide{
+  width: 200px;
+  height: 158px;
+  margin-bottom: 7px;
+  margin-top: 0px;
+  border: solid 1px #000000 !important;
+  background: #fff;
+}
+#container_iff #credito{
+  font-size:60%;
+  color:#6BA5BF;
+  text-align:left;
+  padding-left:3px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+#container_iff a{
+  color: #000000;
+  text-decoration: none;
+}
+
+#painel-conteudo_iff{
+  display: none;
+  text-align: center;
+}
+
+#painel_iff h3{
+  font-size: 11px !important;
+}
+#painel_iff h2 {
+ border: 0px;
+ border: none;
+ font-size:1em;
+ padding:0px;
+ margin:0px;
+}
+
+#prox-ant_iff{
+  margin-top: -15px;
+  border: solid 0px red;
+}
+#proximo_iff{
+  text-align: right;
+  display: block;
+  margin-top: -18px;
+}
+#anterior_iff{
+  text-align: left;
+  display: block;
+}
+
+
+/* </dtml-with> */

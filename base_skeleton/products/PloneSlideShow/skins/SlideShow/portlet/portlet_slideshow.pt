@@ -1,0 +1,168 @@
+<html i18n:domain="ploneslideshow"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+<body>
+
+ <div metal:define-macro="portlet"
+      tal:define="props python:here.portal_properties.ploneslideshow_properties;
+                  default_skin props/slide_default_portletskin;
+                  default_skin python:test(default_skin,default_skin,'default');
+                  box_items    context/list_panel;
+                  pinterval    props/portlet_transition_interval;"
+      tal:omit-tag="">
+
+  <tal:validation tal:condition="python:props.enable_portlet != False">
+
+   <div tal:omit-tag="" tal:condition="python:box_items =='not instaled'">
+    <div class="portalMessage" i18n:translate="publicatorrequired">
+     The CMFPublicator is requerid, more informations read the PloneSlideShow documentation.
+    </div>
+
+    <ul class="configletDetails">
+     <li>
+      <a tal:attributes="class string:navTreeCurrentItem;
+                         href  python:portal_url + '/slideshow_docs'">
+       <img tal:attributes="src python:portal_url + '/book_icon.gif';
+                            height python:'16';
+                            width python:'16'" />
+       <span i18n="documentation">Documentation</span>
+      </a>
+     </li>
+    </ul>
+   </div>
+
+
+   <div tal:omit-tag="" tal:condition="python:box_items =='not boxid'">
+    <div class="portalMessage" i18n:translate="notboxid">
+     Box name don't exists in CMFPublicator, more informations read the PloneSlideShow documentation.
+    </div>
+
+    <ul class="configletDetails">
+     <li>
+      <a tal:attributes="class string:navTreeCurrentItem;
+                         href  python:portal_url + '/slideshow_docs'">
+       <img tal:attributes="src python:portal_url + '/book_icon.gif';
+                            height python:'16';
+                            width python:'16'" />
+       <span i18n="documentation">Documentation</span>
+      </a><br /><br />
+
+      <a tal:attributes="class string:navTreeCurrentItem;
+                         href  python:portal_url + '/createBox'">
+
+
+       <img tal:attributes="src python:portal_url + '/action_icon.gif';
+                            height python:'16';
+                            width python:'16'" />
+
+       <span i18n="autocreate">Auto create the slideshow box</span>
+      </a>
+     </li>
+    </ul>
+   </div>
+
+
+   <div tal:omit-tag="" tal:condition="python:box_items =='not list'">
+    <div class="portalMessage" i18n:translate="notlist">
+     Not exists a object list in CMFPublicator, more informations read the PloneSlideShow documentation.
+    </div>
+
+    <ul class="configletDetails">
+     <li>
+      <a tal:attributes="class string:navTreeCurrentItem;
+                         href  python:portal_url + '/slideshow_docs'">
+       <img tal:attributes="src python:portal_url + '/book_icon.gif';
+                            height python:'16';
+                            width python:'16'" />
+       <span i18n="documentation">Documentation</span>
+      </a>
+     </li>
+    </ul>
+   </div>
+
+
+
+
+   <div tal:omit-tag="" 
+        tal:condition="python: box_items != 'not list' and box_items != 'not instaled' and box_items != 'not boxid'" 
+        tal:define="frames python:len(box_items)">
+
+    <script tal:attributes="src string:$portal_url/portlet/prototype.js" type="text/javascript"> </script>
+    <script tal:attributes="src string:$portal_url/portlet/scriptaculous.js" type="text/javascript"> </script>
+
+    <span tal:condition="python: frames > 1 " tal:replace="structure python: context.portlet.banner_slideshow_js(0,frames-1,pinterval)" />
+
+    <dl tal:attributes="id string:portlet-${props/slide_default_portletskin};
+                                             class string:portletslide-${props/slide_default_portletskin}">
+     <dt class="portletHeader">
+      <span tal:attributes="class string:${props/slide_default_portletskin}_title">PloneSlideShow</span>
+     </dt>       
+
+     <dd class="portletItem odd">
+      <tal:block tal:repeat="obj box_items">
+       <div tal:define="item_description python:obj['Description'][:39];
+                        item_url obj/RelativeContentURL;
+                        new_window obj/NewWindow;
+                        item_title obj/Title;
+                        item_number python:repeat['obj'].index;
+                        link_final obj/RemoteUrl;
+                        item_type  obj/Type;
+                        item_date  python:DateTime(obj['Date']).strftime('%d-%m-%Y');
+                        item_image obj/ImageURL;"
+            tal:attributes="id string:slideshow$item_number;
+                            style python:test(item_number > 0, 'display: none', 'font-weight: bold')"
+            tal:condition="python:item_url">
+
+        <tal:block tal:condition="python:item_type != 'File'">
+         <a tal:condition="not: python:item_image"
+            tal:attributes="href python: test(link_final, link_final, item_url + '/image_view_fullscreen');
+                            title item_description;
+                            target python:test(new_window, '_blank', None);">
+          <div class="tile">
+           <span tal:content="item_title">Title</span>
+          </div>
+          <img tal:attributes="src string:${item_url}/image_thumb; 
+                               alt item_title" />
+         </a>
+
+         <a tal:condition="python:item_image"
+            tal:attributes="href python: test(link_final, link_final, item_url + '/view');
+                            title item_description;
+                            target python:test(new_window, '_blank', None);">
+          <img tal:attributes="src string:${item_image}/image_thumb; 
+                               alt item_title" /><br/>
+          <div class="tile">
+           <span tal:content="item_title">Title</span>
+          </div>
+          <span tal:condition="python:here.portal_properties.ploneslideshow_properties.with_description == True" class="description" tal:content="item_description"></span>
+         </a>
+        </tal:block>
+
+        <tal:block tal:condition="python:item_type == 'File'">
+         <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="100%" height="100%">
+          <param name="wmode" value="transparent" />
+          <param name="movie" tal:attributes="value item_url" />
+          <param name="quality" value="high" />
+          <param name="bgcolor" value="#FFFFFF" />
+          <embed tal:attributes="src item_url" quality="high" bgcolor="#FFFFFF" width="100%" height="100%" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" />
+         </object>
+        </tal:block>
+
+
+       </div>
+
+      </tal:block>
+
+
+    </dl>
+
+   </div>
+
+  </tal:validation>
+
+ </div>
+</body>
+
+</html>

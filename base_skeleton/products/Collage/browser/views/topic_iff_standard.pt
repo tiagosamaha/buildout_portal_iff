@@ -1,0 +1,31 @@
+<tal:manager replace="structure provider:collage.ContentManager" />
+
+
+<tal:variables define="plone_view here/@@plone;
+                       toLocalizedTime nocall: plone_view/toLocalizedTime;
+                       isAnon view/isAnon;
+                       mtool view/mtool;
+                       portal_url view/portal_url;
+                       normalizeString view/normalizeString;
+                       site_properties view/site_properties">
+
+  <tal:topic define="topicContents python:here.queryCatalog(batch=True)"
+             condition="topicContents">
+    
+
+    <tal:listing define="view context/@@collage_kss_helper/getKssView;
+                         getKssClasses python: view.getKssClasses;
+                         templateId string:folder_listing;
+                         folderContents topicContents">
+      <metal:listing-macro use-macro="here/folder_listing_iff/macros/listing" />
+    </tal:listing>
+
+    <a tal:attributes="href here/absolute_url"
+       tal:condition="python:len(topicContents) ==  here.itemCount"><img class="imgMoreLeft" alt="Mais Notícias..." src="++resource++collage-resources/more-more.gif" title="Mais Notícias..."/></a>
+    <a tal:attributes="href string:${here/absolute_url}/RSS" title="Feed RSS"><img class="imgRSSRight" alt="Feed RSS" src="++resource++collage-resources/Feed-icon.png"/></a>
+
+  </tal:topic>
+
+
+</tal:variables>
+

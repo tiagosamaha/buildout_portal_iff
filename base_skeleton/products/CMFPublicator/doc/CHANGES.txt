@@ -1,0 +1,6 @@
+CMFPublicator changes
+
+  Version 1.2.2: 2007/10/10
+
+    * Plone 3.0 compatibility
+

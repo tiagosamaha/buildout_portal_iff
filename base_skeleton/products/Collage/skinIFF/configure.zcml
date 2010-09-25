@@ -1,0 +1,62 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+	   xmlns:browser="http://namespaces.zope.org/browser"
+	   >
+
+  <utility
+     name="iff-eventos-skins"
+     provides="Products.Collage.interfaces.IPortletSkin"
+     factory=".skins.EventosPortletSkin"
+     />
+
+  <utility
+     name="iff-processo-seletivo-skins"
+     provides="Products.Collage.interfaces.IPortletSkin"
+     factory=".skins.ProcessoSeletivoPortletSkin"
+     />
+
+  <utility
+     name="iff-arte-cultura-skins"
+     provides="Products.Collage.interfaces.IPortletSkin"
+     factory=".skins.ArteCulturaPortletSkin"
+     />
+
+
+  <utility
+     name="iff-oportunidade-skins"
+     provides="Products.Collage.interfaces.IPortletSkin"
+     factory=".skins.OportunidadeSkin"
+     />
+
+  <utility
+     name="iff-noticias-eventos-alunos-skins"
+     provides="Products.Collage.interfaces.IPortletSkin"
+     factory=".skins.NoticiasEventosAlunosSkin"
+     />
+
+ <utility
+     name="iff-edital-skins"
+     provides="Products.Collage.interfaces.IPortletSkin"
+     factory=".skins.EditalSkin"
+     />
+
+  <utility
+     name="iff-recado-bolsista-skins"
+     provides="Products.Collage.interfaces.IPortletSkin"
+     factory=".skins.RecadoBolsistaSkin"
+     />
+
+
+  <utility
+     name="iff-requalificacao-skins"
+     provides="Products.Collage.interfaces.IPortletSkin"
+     factory=".skins.RequalificacaoSkin"
+     />
+  
+  
+<browser:resourceDirectory 	   
+     name="iff-stylesheets"
+     directory="stylesheets"
+     permission="zope2.Public"
+     />
+
+</configure>

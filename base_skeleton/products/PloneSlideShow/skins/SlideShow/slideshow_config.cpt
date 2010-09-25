@@ -1,0 +1,279 @@
+<metal:page define-macro="master">
+ <metal:master use-macro="here/prefs_main_template/macros/master" i18n:domain="ploneslideshow"
+               xmlns:metal="http://xml.zope.org/namespaces/metal"
+               xmlns:tal="http://xml.zope.org/namespaces/tal"
+               xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <metal:block fill-slot="top_slot"
+               tal:define="dummy python:request.set('disable_border',1)"/>
+
+  <metal:fillbase fill-slot="base">
+   <metal:baseslot define-slot="base">
+    <base href="" tal:attributes="href template/absolute_url" />
+   </metal:baseslot>
+  </metal:fillbase>
+
+  <metal:cssslot fill-slot="css_slot">
+   <!-- A slot where you can insert CSS in the header from a template -->
+   <metal:cssslot define-slot="css_slot" />
+  </metal:cssslot>
+
+  <metal:override fill-slot="column_two_slot" />
+
+
+  <tal:comment replace="nothing"> This is deprecated, please use style_slot instead. </tal:comment>
+  <metal:cssslot define-slot="css_slot" />
+
+
+  <body>
+
+   <div metal:fill-slot="prefs_configlet_main"
+        tal:define="errors python:request.get('errors', {});
+                    props python:here.portal_properties;">
+
+    <metal:styleslot define-slot="style_slot" />
+
+    <div class="configlet">
+
+     <div class="documentEditable">
+
+
+      <!-- simulating views -->
+      <ul class="contentViews"
+          tal:define="tabs python:('Config','slideshow_config'),
+                                  ('Documentation', 'slideshow_docs'),
+                                  ('Faq', 'slideshow_faq'),;
+                      tabs python:[ {'label':label, 'name':name} for (label,name) in tabs ];">
+       <li tal:repeat="tab tabs"
+           class="selected" tal:attributes="class python:template.id==tab['name'] and 'selected' or ''">
+        <a href=""
+           tal:attributes="href string:${here/absolute_url}/${tab/name}"
+           i18n:translate="" tal:content="tab/label">Config</a>
+       </li>
+      </ul>
+      <div class="contentActions">
+       &nbsp;
+      </div>
+      <!-- End of tabs -->
+
+      <div class="documentContent" metal:define-slot="slideshow_content">
+       <h1 class="titleconfig" i18n:translate="heading_slide_setup">PloneSlideShow global configuration</h1>
+
+       <a href=""
+         class="link-parent"
+         tal:attributes="href string: $portal_url/plone_control_panel"
+         i18n:domain="plone" i18n:translate="label_up_to_plone_setup">
+         Up to Plone Setup
+       </a>
+
+       <br />
+
+
+       <form action=""
+             name="reconfig"
+             method="post"
+             class="enableUnloadProtection"
+             tal:attributes="action string:$portal_url/slideshow_config"
+             tal:define="props python:here.portal_properties.ploneslideshow_properties;">
+          
+
+       <fieldset id="slideprefs_global" style="float: left; margin-right: 1em;">
+         <legend i18n:translate="heading_slide_setup">PloneSlideShow global configuration</legend>
+ 
+         <div class="field"
+              tal:define="default_skin request/slide_default_skin|props/slide_default_skin;
+                          default_skin python:test(default_skin,default_skin,'default');
+                          listskins request/skinlist|props/skinlist">
+ 
+          <img tal:condition="python:props.enable_portlet == False" tal:attributes="src python:'confirm_icon.gif';
+                                                                                   hspace string:1;
+                                                                                   align string:left;
+                                                                                   vspace string:1"/>
+
+
+          <img tal:condition="python:props.enable_portlet == True" tal:attributes="src python:'error_icon.gif';
+                                                                                   hspace string:1;
+                                                                                   align string:left;
+                                                                                   vspace string:1"/>
+
+
+           <label for="slide_style" i18n:translate="slide_style">
+               Slide skin
+           </label>
+         
+           <div class="formHelp" i18n:translate="help_slide">
+             Choose the slide skin.
+           </div>
+
+
+           <tal:block tal:repeat="skin listskins">
+            <tal:skin define="img_skin string:${portal_url}/demoskin_${skin}.png">
+
+             <input type="hidden"
+                    name="skinlist:list"
+                    tal:attributes="value skin" />
+
+                   <input type="radio"
+                          class="noborder"
+                          name="slide_default_skin"
+                          tal:attributes="id string:slide_default_skin_$skin;
+                                          value skin;
+                                          checked python:test(skin==default_skin, 'ckecked', None);
+                                          tabindex tabindex/next;" />
+                   <label tal:attributes="for string:slide_default_skin_$skin">
+                    <img tal:attributes="src img_skin;
+                                         alt skin;
+                                         title skin"
+                         style="float:none; border: 1px solid #000000; margin-bottom: 1em; width: 103px; height: 121px" />&nbsp;
+                    <tal:block  tal:content="skin" />
+                   </label><br />
+            </tal:skin>
+    
+           </tal:block>
+         </div>
+       </fieldset>
+
+
+       <fieldset id="slideprefs_global" style="float: left;">
+
+        <legend>
+         <input name="enable_portlet:boolean"
+                tal:attributes="class string:noborder;
+                                id string:enable_portlet;
+                                type string:checkbox;
+                                value python:test(props.enable_portlet == False, 'True');
+                                checked python:test(props.enable_portlet == True, 'ckecked', None)">
+
+         <label for="enable_portlet" style="font-size: 110%;" i18n:translate="slide_portlet">Enable SlideShow Portlet</label>
+
+        </legend>
+
+        <img tal:condition="python:props.enable_portlet == True" tal:attributes="src python:'confirm_icon.gif';
+                                                                                 hspace string:1;
+                                                                                 align string:left;
+                                                                                 vspace string:1"/>
+
+
+        <img tal:condition="python:props.enable_portlet == False" tal:attributes="src python:'error_icon.gif';
+                                                                                 hspace string:1;
+                                                                                 align string:left;
+                                                                                 vspace string:1"/>
+
+
+        <div class="formHelp" i18n:translate="slide_portlet_description">Enabled a SlideShow portlet and disable the SlideShow box</div>
+
+
+        <div class="field"
+              tal:define="default_portletskin request/slide_default_portletskin|props/slide_default_portletskin;
+                          default_portletskin python:test(default_portletskin,default_portletskin,'default');
+                          listskins request/portletskinlist|props/portletskinlist;
+                          transition request/portlet_transition_interval|props/portlet_transition_interval">
+
+         <fieldset id="slideprefs_global" style="float: left; margin-right: 1em;">
+          <legend>
+           <label for="slide_style" i18n:translate="portletslide_style">
+               Portlet Slide skin
+           </label>
+         
+           <div class="formHelp" i18n:translate="help_portletslide">
+             Choose the portlet slide skin.
+           </div>
+
+
+           <tal:block tal:repeat="skin listskins">
+            <tal:skin define="img_skin string:${portal_url}/portlet/demoskin_${skin}.png">
+ 
+             <input type="hidden"
+                    name="portletskinlist:list"
+                    tal:attributes="value skin" />
+
+                   <input type="radio"
+                          class="noborder"
+                          name="slide_default_portletskin"
+                          tal:attributes="id string:slide_default_portletskin_$skin;
+                                          value skin;
+                                          checked python:test(skin==default_portletskin, 'ckecked', None);
+                                          tabindex tabindex/next;" />
+                   <label tal:attributes="for string:slide_default_portletskin_$skin">
+                    <img tal:attributes="src img_skin;
+                                         alt skin;
+                                         title skin"
+                         style="float:none; border: 1px solid #000000; margin-bottom: 1em; width: 103px; height: 121px" />&nbsp;
+                    <tal:block  tal:content="skin" />
+                   </label><br />
+            </tal:skin>
+    
+           </tal:block>
+
+
+          </legend>
+         </fieldset>
+
+
+
+         <fieldset id="slideprefs_global" style="float: left;">
+          <legend>
+           <label for="portlet_config" i18n:translate="portlet_config">
+            Portlet Slide configuration
+           </label>
+          </legend>
+
+          <label for="portlet_transition_interval" style="font-size: 100%;" i18n:translate="selection_time">Select transitions interval</label>        
+          <div class="formHelp" i18n:translate="help_slide_interval">
+            Choose the transition interval.
+          </div>
+
+          <select name="portlet_transition_interval:int" id="portlet_transition_interval">
+           <option tal:repeat="itens python:list((3000,5000,7000))" 
+                   tal:attributes="value itens;
+                                   selected python:test(transition == itens, 'selected', None)" tal:content="itens">Valor</option>
+          </select>
+
+          <div style="margin-top:0.5em;">
+           <label for="with_description" style="font-size: 100%;" i18n:translate="with_description">Portlet with Description?</label>
+
+           <input name="with_description:boolean"
+                  tal:attributes="class string:noborder;
+                                  id string:with_description;
+                                  type string:checkbox;
+                                  value python:test(props.with_description == False, 'True');
+                                  checked python:test(props.with_description == True, 'ckecked', None)">
+          </div>
+         </fieldset>
+
+
+
+
+        </div>
+
+       </fieldset>
+
+
+       <div class="visualClear" />
+
+        <div class="formControls">
+            <input class="context"
+                   type="submit" name="form.button.Save"
+                   value="Save"
+                   i18n:domain="plone"
+                   i18n:attributes="value"
+                   tal:attributes="tabindex tabindex/next;" />
+            <input class="context"
+                   type="submit"
+                   name="form.button.Cancel"
+                   value="Cancel"
+                   i18n:domain="plone"
+                   i18n:attributes="value"
+                   tal:attributes="tabindex tabindex/next;" />
+        </div>
+          
+        <input type="hidden" name="form.submitted" value="1" />
+
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+  </body>
+ </metal:master>
+</metal:page>

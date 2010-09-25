@@ -1,0 +1,213 @@
+# Gettext Message File for CMFPublicator
+# First author <email@address>, year.
+msgid ""
+msgstr ""
+"Project-Id-Version: CMFPublicator 1.2\n"
+"POT-Creation-Date: 2004-05-20 12:00-0300\n"
+"PO-Revision-Date: 2004-05-20 12:00-0300\n"
+"Last-Translator: Please edit\n"
+"Language-Team: Please edit <email@address>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: Please edit\n"
+"Language-Name: Please edit\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: publicator\n"
+
+msgid "Select"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit All"
+msgstr ""
+
+msgid "Setup"
+msgstr ""
+
+msgid "Setup All"
+msgstr ""
+
+msgid "Id"
+msgstr ""
+
+# Original: "An identification to the box, you must not use spaces or special characters. It's used in the template to refer the box."
+msgid "setup_id"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+# Original: "The box name is a string that identifies the box title. It can be viewed in the heading tab of the box interface."
+msgid "setup_name"
+msgstr ""
+
+msgid "Number of items"
+msgstr ""
+
+# Original: "The number of items that are shown in the box."
+msgid "setup_number_items"
+msgstr ""
+
+msgid "Content type"
+msgstr ""
+
+# Original: "Select the content types that are presented in this box. More than one item can be selected."
+msgid "setup_content_type"
+msgstr ""
+
+msgid "Number of searched items"
+msgstr ""
+
+# Original: "The number of searched items that are presented in each dropdown box component of the setup page. This is used to improve the search performance in the catalog, the page load and to despollute the dropdown box."
+msgid "setup_searched_items"
+msgstr ""
+
+msgid "Search workflow states"
+msgstr ""
+
+# Original: "They're the worflow states to the searched items in the catalog that will be presented in the dropdown box."
+msgid "setup_search_workflow"
+msgstr ""
+
+msgid "Icon URL"
+msgstr ""
+
+# Original: "The relative to portal URL of the icon that identifies the box. It is presented in the same tab with Name property. Use it if necessary."
+msgid "setup_icon_url"
+msgstr ""
+
+msgid "Box width"
+msgstr ""
+
+# Original: "This property defines the box width and can be used in the in-line style to fix the width in em, px and so on. Use it if necessary. The default is auto."
+msgid "setup_box_width"
+msgstr ""
+
+msgid "Box height"
+msgstr ""
+
+# Original: "This property defines the box height and can be used in the in-line style to fix the height in em, px and so on. Use it if necessary. The default is auto."
+msgid "setup_box_height"
+msgstr ""
+
+msgid "With image?"
+msgstr ""
+
+# Original: "Check this box if you want store a image URL to each item or one specific box item. The images are presented in a dropdown box."
+msgid "setup_with_image"
+msgstr ""
+
+msgid "Images folder URL"
+msgstr ""
+
+# Original: "The folder URL, relative to portal (without '/' in the begining), in wich are stored the images or files that will be used by the items. It'll be used only if the With image? option is checked. Leave it blank to search all the images and files in the portal."
+msgid "setup_images_folder"
+msgstr ""
+
+msgid "Image workflow states"
+msgstr ""
+
+# Original: "The workflow state to the images and files that are searched and that are available to each box item. It'll be used only if the With image? option is checked."
+msgid "setup_image_workflow"
+msgstr ""
+
+msgid "Visible?"
+msgstr ""
+
+# Original: "An easy and fast way to hide a box."
+msgid "setup_visible"
+msgstr ""
+
+# Original: "Individual Box Selection"
+msgid "select_publication"
+msgstr ""
+
+# Original: "Content Publication"
+msgid "edit_publication"
+msgstr ""
+
+# Original: "Publication Boxes Setup"
+msgid "setup_publication"
+msgstr ""
+
+# Original: "Select the box you want to edit or configure."
+msgid "select_content_boxes"
+msgstr ""
+
+# Original: "Select the content that you want show in each site box."
+msgid "edit_content_boxes"
+msgstr ""
+
+# Original: "Configure each site publication box with the criteria you want use to present the contents."
+msgid "setup_content_boxes"
+msgstr "Configure each site publication box with the criteria you want use to present the contents."
+
+msgid "Save"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Reset"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Reset all items"
+msgstr ""
+
+msgid "Update all items"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+# Original: "Image URL"
+msgid "image_url"
+msgstr ""
+
+msgid "Item ${item_x}"
+msgstr ""
+
+# Original: "More..."
+msgid "box_morelink"
+msgstr ""
+
+# Original: "Open in new window"
+msgid "new_window"
+msgstr ""
+
+msgid "News"
+msgstr ""
+
+msgid "Example"
+msgstr ""
+
+msgid "Banners"
+msgstr ""
+
+msgid "Documents"
+msgstr ""
+
+# Original: "(Required)"
+msgid "label_required"
+msgstr ""
+
+msgid "Required"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+# Original: "No item was selected."
+msgid "no_item"
+msgstr ""
+

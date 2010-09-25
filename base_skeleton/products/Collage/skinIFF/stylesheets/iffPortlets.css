@@ -1,0 +1,733 @@
+#collage .documentFirstHeading{
+    border-bottom: none !important;
+}
+#collage .portlet {
+    border-bottom:medium none;
+}
+#collage .portlet dd a {
+    border-bottom:none;
+    text-decoration:none;
+}
+
+#collage .block_1{
+    border-right: 1px solid #CCCCCC;
+}
+#collage .two-columns-equal .block_1, #collage .two-columns-equal .block_2 {
+width:49% !important;
+}
+
+#collage .iff-eventos-skins {
+    background-color:White;
+    border-bottom:2px solid #99CC66;
+    margin:1px 0 1em;
+    border-bottom:medium none;
+}
+
+#collage .iff-eventos-skins .portletHeader {
+    border:2px solid  #99CC66;
+    border-bottom:medium none;
+    color: #ff0000;
+    text-transform:uppercase;
+    font-weight:bold;
+
+}
+
+#collage .iff-eventos-skins .barraInferiorTituloPortlet {
+    background-color:#87ab65;
+    height:3px;
+}
+
+#collage .iff-eventos-skins .portletTopLeft{
+    background-image:url(++resource++collage-resources/calend.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:59px;
+    left:-20px;
+    position:relative;
+    top:-7px;
+    width:52px;
+}
+#collage .iff-eventos-skins .portletTopRight{
+    background-image:url(++resource++collage-resources/canto-dir-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:25px;
+    position:relative;
+    right:-19px;
+    top:-2px;
+    width:23px;
+}
+#collage .iff-eventos-skins .portletBottomLeftPortlet{
+    background-image:url(++resource++collage-resources/canto-esq-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:26px;
+    position:relative;
+    top:-26px;
+    width:36px;
+}
+#collage .iff-eventos-skins .portletBottomRightPortlet{
+    background-image:url(++resource++collage-resources/canto-dir-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:28px;
+    position:relative;
+    right:-5px;
+    top:-27px; 
+    width:22px;
+}
+
+#collage .iff-eventos-skins .portletItem {
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+    border-left:2px solid #99CC66;
+    border-right:medium none;
+    margin-right:-5px;
+
+}
+#collage .iff-eventos-skins .sombraPortletInferior {
+    background-image:url(++resource++collage-resources/sombra-baixo.png);
+    background-repeat:repeat-x;
+    height:10px;
+
+}
+#collage .iff-eventos-skins .portletFooter {
+    background-color:#ededed;
+    border-color:#99CC66;
+    border-style:none none none solid;
+    border-width:2px;
+    margin: 0;
+    margin-right:-5px;
+    padding:0.25em 1em;
+    text-align:right;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+}
+#collage .iff-eventos-skins .portletFooter img {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#collage .iff-arte-cultura-skins .portletHeader {
+    border:2px solid  #99CC66;
+    border-bottom:medium none;
+    color: #ff0000;
+    text-transform:uppercase;
+    font-weight:bold;
+    max-height:1.6em;
+
+}
+#collage .iff-arte-cultura-skins .portletTopLeft{
+    background-image:url(++resource++collage-resources/art-cul.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:65px;
+    left:-47px;
+    position:relative;
+    top:-11px;
+    width:76px;
+}
+#collage .iff-arte-cultura-skins .portletTopRight{
+    background-image:url(++resource++collage-resources/canto-dir-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:25px;
+    position:relative;
+    right:-27px;
+    top:-2px;
+    width:23px;
+}
+
+#collage .iff-arte-cultura-skins .portletBottomLeftPortlet{
+    background-image:url(++resource++collage-resources/canto-esq-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:26px;
+    position:relative;
+    top:-26px;
+    width:36px;
+}
+#collage .iff-arte-cultura-skins .portletBottomRightPortlet{
+    background-image:url(++resource++collage-resources/canto-dir-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:28px;
+    position:relative;
+    right:-5px;
+    top:-27px; 
+    width:22px;
+}
+
+
+#collage .iff-arte-cultura-skins .portletItem {
+    border-left:2px solid #99CC66;
+    border-right:2px solid #99CC66;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+    border-left:2px solid #99CC66;
+    border-right:medium none;
+    margin-right:-5px;
+
+}
+#collage .iff-arte-cultura-skins .sombraPortletInferior {
+    background-image:url(++resource++collage-resources/sombra-baixo.png);
+    background-repeat:repeat-x;
+    height:10px;
+
+}
+
+#collage .iff-arte-cultura-skins .portletFooter {
+    background-color:#ededed;
+    border-color:#99CC66;
+    border-style:none none none solid;
+    border-width:2px;
+    margin: 0;
+    margin-right:-5px;
+    padding:0.25em 1em;
+    text-align:right;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+}
+#collage .iff-arte-cultura-skins .portletFooter img {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+#collage .iff-processo-seletivo-skins .portlet{
+    background-color:White;
+    border-bottom:2px solid #99CC66;
+    margin:1px 0 1em;
+
+}
+
+#collage .iff-processo-seletivo-skins .portletHeader {
+    border:2px solid  #99CC66;
+    border-bottom:medium none;
+    color: #ff0000;
+    text-transform:uppercase;
+    font-weight:bold;
+    max-height:1.6em;
+}
+#collage .iff-processo-seletivo-skins .portletTopLeft{
+    background-image:url(++resource++collage-resources/curso.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:67px;
+    left:-16px;
+    position:relative;
+    top:-9px;
+    width:52px;
+
+}
+#collage .iff-processo-seletivo-skins .portletTopRight{
+    background-image:url(++resource++collage-resources/canto-dir-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:25px;
+    position:relative;
+    right:-19px;
+    top:-2px;
+    width:23px;
+}
+
+#collage .iff-processo-seletivo-skins .portletBottomLeftPortlet{
+    background-image:url(++resource++collage-resources/canto-esq-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:26px;
+    position:relative;
+    top:-26px;
+    width:36px;
+}
+#collage .iff-processo-seletivo-skins .portletBottomRightPortlet{
+    background-image:url(++resource++collage-resources/canto-dir-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:28px;
+    position:relative;
+    right:-5px;
+    top:-27px; 
+    width:22px;
+}
+
+#collage .iff-processo-seletivo-skins .portletItem {
+    border-left:2px solid #99CC66;
+    border-right:2px solid #99CC66;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+    border-left:2px solid #99CC66;
+    border-right:medium none;
+    margin-right:-5px;
+
+}
+#collage .iff-processo-seletivo-skins .sombraPortletInferior {
+    background-image:url(++resource++collage-resources/sombra-baixo.png);
+    background-repeat:repeat-x;
+    height:10px;
+
+}
+#collage .iff-processo-seletivo-skins .portletFooter {
+    background-color:#ededed;
+    border-color:#99CC66;
+    border-style:none none none solid;
+    border-width:2px;
+    margin: 0;
+    margin-right:-5px;
+    padding:0.25em 1em;
+    text-align:right;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+}
+
+#collage .iff-processo-seletivo-skins .portletFooter img {
+    margin-right: 10px;
+}
+
+
+
+
+/* Portlets de Aluno */
+
+/* Oportunidades */
+
+
+
+#collage .iff-oportunidade-skins {
+    background-color:White;
+    border-bottom:2px solid #99CC66;
+    margin:1px 0 1em;
+    border-bottom:medium none;
+}
+
+#collage .iff-oportunidade-skins .portletHeader {
+    border:2px solid  #99CC66;
+    border-bottom:medium none;
+    color: #ff0000;
+    text-transform:uppercase;
+    font-weight:bold;
+
+}
+
+#collage .iff-oportunidade-skins .barraInferiorTituloPortlet {
+    background-color:#87ab65;
+    height:3px;
+}
+
+#collage .iff-oportunidade-skins .portletTopLeft{
+    background-image:url(++resource++collage-resources/escada.gif);
+    background-repeat:no-repeat;
+    float:left;
+    height:83px;
+    left:-15px;
+    position:relative;
+    top:-14px;
+    width:68px;
+}
+#collage .iff-oportunidade-skins .portletTopRight{
+    background-image:url(++resource++collage-resources/canto-dir-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:25px;
+    position:relative;
+    right:-19px;
+    top:-2px;
+    width:23px;
+}
+#collage .iff-oportunidade-skins .portletBottomLeftPortlet{
+    background-image:url(++resource++collage-resources/canto-esq-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:26px;
+    position:relative;
+    top:-26px;
+    width:36px;
+}
+#collage .iff-oportunidade-skins .portletBottomRightPortlet{
+    background-image:url(++resource++collage-resources/canto-dir-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:28px;
+    position:relative;
+    right:-5px;
+    top:-27px; 
+    width:22px;
+}
+
+#collage .iff-oportunidade-skins .portletItem {
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+    border-left:2px solid #99CC66;
+    border-right:medium none;
+    margin-right:-5px;
+
+}
+#collage .iff-oportunidade-skins .sombraPortletInferior {
+    background-image:url(++resource++collage-resources/sombra-baixo.png);
+    background-repeat:repeat-x;
+    height:10px;
+
+}
+#collage .iff-oportunidade-skins .portletFooter {
+    background-color:#ededed;
+    border-color:#99CC66;
+    border-style:none none none solid;
+    border-width:2px;
+    margin: 0;
+    margin-right:-5px;
+    padding:0.25em 1em;
+    text-align:right;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+}
+#collage .iff-oportunidade-skins .portletFooter img {
+    margin-right: 10px;
+}
+
+/* Noticias-Eventos */
+
+
+#collage .iff-noticias-eventos-alunos-skins .portlet{
+
+}
+
+#collage .iff-noticias-eventos-alunos-skins .portletHeader {
+    font-size:1.2em;
+}
+#collage .iff-noticias-eventos-alunos-skins .portletHeader span{
+    background-color:transparent;
+}
+#collage .iff-noticias-eventos-alunos-skins .portletTopRight{
+}
+
+#collage .iff-noticias-eventos-alunos-skins .portletBottomLeftPortlet{
+}
+#collage .iff-noticias-eventos-alunos-skins .portletBottomRightPortlet{
+}
+
+#collage .iff-noticias-eventos-alunos-skins .portletItem {
+}
+
+#collage .iff-noticias-eventos-alunos-skins .sombraPortletInferior {
+
+}
+#collage .iff-noticias-eventos-alunos-skins .portletFooter {
+    background-color:#ededed;
+    text-align:right;
+    height:20px;
+}
+
+
+
+/* Editais */
+
+
+
+#collage .iff-edital-skins {
+    background-color:White;
+    border-bottom:2px solid #99CC66;
+    margin:1px 0 1em;
+    border-bottom:medium none;
+}
+
+#collage .iff-edital-skins .portletHeader {
+    border:2px solid  #99CC66;
+    border-bottom:medium none;
+    color: #ff0000;
+    text-transform:uppercase;
+    font-weight:bold;
+
+}
+
+#collage .iff-edital-skins .barraInferiorTituloPortlet {
+    background-color:#87ab65;
+    height:3px;
+}
+
+#collage .iff-edital-skins .portletTopLeft{
+    background-image:url(++resource++collage-resources/edital.gif);
+    background-repeat:no-repeat;
+    float:left;
+    height:78px;
+    left:-29px;
+    position:relative;
+    top:-8px;
+    width:62px;
+}
+#collage .iff-edital-skins .portletTopRight{
+    background-image:url(++resource++collage-resources/canto-dir-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:25px;
+    position:relative;
+    right:-19px;
+    top:-2px;
+    width:23px;
+}
+#collage .iff-edital-skins .portletBottomLeftPortlet{
+    background-image:url(++resource++collage-resources/canto-esq-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:26px;
+    position:relative;
+    top:-26px;
+    width:36px;
+}
+#collage .iff-edital-skins .portletBottomRightPortlet{
+    background-image:url(++resource++collage-resources/canto-dir-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:28px;
+    position:relative;
+    right:-5px;
+    top:-27px; 
+    width:22px;
+}
+
+#collage .iff-edital-skins .portletItem {
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+    border-left:2px solid #99CC66;
+    border-right:medium none;
+    margin-right:-5px;
+
+}
+#collage .iff-edital-skins .sombraPortletInferior {
+    background-image:url(++resource++collage-resources/sombra-baixo.png);
+    background-repeat:repeat-x;
+    height:10px;
+
+}
+#collage .iff-edital-skins .portletFooter {
+    background-color:#ededed;
+    border-color:#99CC66;
+    border-style:none none none solid;
+    border-width:2px;
+    margin: 0;
+    margin-right:-5px;
+    padding:0.25em 1em;
+    text-align:right;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+}
+#collage .iff-edital-skins .portletFooter img {
+    margin-right: 10px;
+}
+
+/* Recado Bolsistas */
+
+
+#collage .iff-recado-bolsista-skins .portlet{
+    background-color:White;
+    border-bottom:2px solid #99CC66;
+    margin:1px 0 1em;
+
+}
+
+#collage .iff-recado-bolsista-skins .portletHeader {
+    border:2px solid  #99CC66;
+    border-bottom:medium none;
+    color: #ff0000;
+    text-transform:uppercase;
+    font-weight:bold;
+    max-height:1.6em;
+}
+#collage .iff-recado-bolsista-skins .portletTopLeft{
+    background-image:url(++resource++collage-resources/recado.gif);
+    background-repeat:no-repeat;
+    float:left;
+    height:79px;
+    left:-28px;
+    position:relative;
+    top:-9px;
+    width:78px;
+
+}
+#collage .iff-recado-bolsista-skins .portletTopRight{
+    background-image:url(++resource++collage-resources/canto-dir-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:25px;
+    position:relative;
+    right:-19px;
+    top:-2px;
+    width:23px;
+}
+
+#collage .iff-recado-bolsista-skins .portletBottomLeftPortlet{
+    background-image:url(++resource++collage-resources/canto-esq-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:26px;
+    position:relative;
+    top:-26px;
+    width:36px;
+}
+#collage .iff-recado-bolsista-skins .portletBottomRightPortlet{
+    background-image:url(++resource++collage-resources/canto-dir-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:28px;
+    position:relative;
+    right:-5px;
+    top:-27px; 
+    width:22px;
+}
+
+#collage .iff-recado-bolsista-skins .portletItem {
+    border-left:2px solid #99CC66;
+    border-right:2px solid #99CC66;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+    border-left:2px solid #99CC66;
+    border-right:medium none;
+    margin-right:-5px;
+
+}
+#collage .iff-recado-bolsista-skins .sombraPortletInferior {
+    background-image:url(++resource++collage-resources/sombra-baixo.png);
+    background-repeat:repeat-x;
+    height:10px;
+
+}
+#collage .iff-recado-bolsista-skins .portletFooter {
+    background-color:#ededed;
+    border-color:#99CC66;
+    border-style:none none none solid;
+    border-width:2px;
+    margin: 0;
+    margin-right:-5px;
+    padding:0.25em 1em;
+    text-align:right;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+}
+
+#collage .iff-recado-bolsista-skins .portletFooter img {
+    margin-right: 10px;
+}
+
+
+
+/* Requalificacao Ex-Aluno*/
+
+
+#collage .iff-requalificacao-skins .portlet{
+    background-color:White;
+    border-bottom:2px solid #99CC66;
+    margin:1px 0 1em;
+
+}
+
+#collage .iff-requalificacao-skins .portletHeader {
+    border:2px solid  #99CC66;
+    border-bottom:medium none;
+    color: #ff0000;
+    text-transform:uppercase;
+    font-weight:bold;
+    max-height:1.6em;
+}
+#collage .iff-requalificacao-skins .portletTopLeft{
+    background-image:url(++resource++collage-resources/requalificacao.gif);
+    background-repeat:no-repeat;
+    float:left;
+    height:55px;
+    left:-28px;
+    position:relative;
+    top:-9px;
+    width:94px;
+
+}
+#collage .iff-requalificacao-skins .portletTopRight{
+    background-image:url(++resource++collage-resources/canto-dir-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:25px;
+    position:relative;
+    right:-19px;
+    top:-2px;
+    width:23px;
+}
+
+#collage .iff-requalificacao-skins .portletBottomLeftPortlet{
+    background-image:url(++resource++collage-resources/canto-esq-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:left;
+    height:26px;
+    position:relative;
+    top:-26px;
+    width:36px;
+}
+#collage .iff-requalificacao-skins .portletBottomRightPortlet{
+    background-image:url(++resource++collage-resources/canto-dir-baixo-portlet.png);
+    background-repeat:no-repeat;
+    float:right;
+    height:28px;
+    position:relative;
+    right:-5px;
+    top:-27px; 
+    width:22px;
+}
+
+#collage .iff-requalificacao-skins .portletItem {
+    border-left:2px solid #99CC66;
+    border-right:2px solid #99CC66;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+    border-left:2px solid #99CC66;
+    border-right:medium none;
+    margin-right:-5px;
+
+}
+#collage .iff-requalificacao-skins .sombraPortletInferior {
+    background-image:url(++resource++collage-resources/sombra-baixo.png);
+    background-repeat:repeat-x;
+    height:10px;
+
+}
+#collage .iff-requalificacao-skins .portletFooter {
+    background-color:#ededed;
+    border-color:#99CC66;
+    border-style:none none none solid;
+    border-width:2px;
+    margin: 0;
+    margin-right:-5px;
+    padding:0.25em 1em;
+    text-align:right;
+    background-image:url(++resource++collage-resources/sombra-lad.png);
+    background-position:right center;
+    background-repeat:repeat-y;
+}
+
+#collage .iff-requalificacao-skins .portletFooter img {
+    margin-right: 10px;
+}
+
+
+

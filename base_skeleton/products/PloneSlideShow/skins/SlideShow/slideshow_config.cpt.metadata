@@ -1,0 +1,10 @@
+[default]
+title = PloneSlideShow Editor User Preferences
+cache = HTTPCahe
+
+[actions]
+action.success=traverse_to:string:prefs_slide_set
+action.success..Save=traverse_to:string:prefs_slide_set
+#action.success..Cancel=traverse_to:string:slide_config
+action.success..Cancel=redirect_to:string:plone_control_panel
+action.failure=traverse_to:string:slide_config

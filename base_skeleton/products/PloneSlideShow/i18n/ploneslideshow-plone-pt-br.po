@@ -1,0 +1,71 @@
+# Translation of slideshow-plone.pot to Portuguese (Brazil)
+# Cleber J Santos <cleber_jsantos@yahoo.com.br>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: PloneSlideShow\n"
+"POT-Creation-Date: 2007-03-23 19:01-0300\n"
+"PO-Revision-Date: 2007-11-03 22:01-0300\n"
+"Last-Translator: Cleber J Santos\n"
+"Language-Team: Cleber J Santos <cleber_jsantos@yahoo.com.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: pt-br\n"
+"Language-Name: Português do Brasil\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: ploneslideshow\n"
+
+msgid "publicatorrequired"
+msgstr "O CMFPublicator é requerido, para maiores informações leia a documentação do PloneSlideShow."
+
+msgid "notlist"
+msgstr "Não existe uma lista de objetos no CMFPublicator, leia a documentação para maiores informações."
+
+msgid "notboxid"
+msgstr "Nome do box não existe no CMFPublicator, leia a documentação do PloneSlideShow para maiores informações."
+
+msgid "autocreate"
+msgstr "Criar automaticamente uma caixa do SlideShow."
+
+msgid "documentation"
+msgstr "Documentação."
+
+msgid "heading_slide_setup"
+msgstr "PloneSlideShow configuração geral"
+
+msgid "slide_style"
+msgstr "Modelos de Slides"
+
+msgid "help_slide"
+msgstr "Escolha o modelo para o seu slide."
+
+msgid "PloneSlideShow settings update."
+msgstr "Alterações salvas com sucesso."
+
+msgid "Config"
+msgstr "Configuração"
+
+msgid "slide_portlet_description"
+msgstr "Habilita o portlet SlideShow e desabilita a caixa do SlideShow."
+
+msgid "portletslide_style"
+msgstr "Modelos de portlet"
+
+msgid "help_portletslide"
+msgstr "Escolha o modelo para o seu portlet"
+
+msgid "portlet_config"
+msgstr "Configuração do portlet"
+
+msgid "selection_time"
+msgstr "Selecione o intervalo das transições"
+
+msgid "help_slide_interval"
+msgstr "Escolha o intervalo"
+
+msgid "slide_portlet"
+msgstr "Habilita portlet"
+
+msgid "with_description"
+msgstr "Portlet com descrição?"

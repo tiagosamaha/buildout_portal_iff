@@ -1,0 +1,18 @@
+<tal:manager replace="structure provider:collage.ContentManager" />
+
+<div metal:define-macro="portlet">
+
+  <div tal:define="kssview context/@@collage_kss_helper"
+      tal:attributes="class string:portlet ${view/getSkin}">
+
+     <table id="structured-document-content">
+      <tr>
+	<td id="portletcontainer-portlets"
+	    tal:define="blocks provider:sd.blocks"
+	    tal:condition="blocks">
+	  <div tal:replace="structure blocks" />
+	</td>
+      </tr>
+    </table>
+   </div>
+</div>

@@ -1,0 +1,484 @@
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/********************************************** Portlet graffs *************************************/
+#portlet-graffs .portletHeader {
+  background: url(&dtml-portal_url;/portlet/graffs/header.jpg) 0px 0px no-repeat #ffeea9;
+  border: 0px;
+  color: #000000;
+  padding: 0em 1em;
+  padding-left: 27px;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+
+#portlet-graffs .portletItem {
+  margin: 0;
+  padding: 1em;
+  border: 0px;
+  overflow: hidden;
+  text-align: center; 
+  background: #b8bfc9;
+}
+
+#portlet-graffs .graffs_title{
+   color: #000000;
+   text-align: left; 
+}
+
+#portlet-graffs .tile{
+  text-align: left;
+  font-weight: bold;
+  display: block;
+  color: #000000 !important;
+  margin-top: 7px;
+}
+
+#portlet-graffs .description{
+   text-align: left;
+   font-weight: normal;
+   display: block;
+   color:#000;
+}
+
+dl.portletslide-graffs{
+   margin: 1px 0 1em 0;
+   background-color: #fff;
+}
+
+dl.portletslide-graffs a {
+   text-decoration: none;
+   display: block;
+}
+
+
+/********************************************** Portlet Alert *************************************/
+#portlet-alert .portletHeader {
+  background: url(&dtml-portal_url;/portlet/alert/header.jpg) 3px 1px no-repeat #fff000;
+  border: 0px;
+  color: #000000;
+  padding: 0em 1em;
+  padding-left: 24px;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+
+#portlet-alert .portletItem {
+  margin: 0;
+  padding: 1em;
+  border: 0px;
+  overflow: hidden;
+  text-align: center; 
+  background: #000000;
+}
+
+#portlet-alert .alert_title{
+   color: #000000;
+   text-align: left; 
+}
+
+#portlet-alert .tile{
+  text-align: left;
+  font-weight: bold;
+  display: block;
+  color: #fff000 !important;
+  margin-top: 7px;
+}
+
+#portlet-alert .description{
+   text-align: left;
+   font-weight: normal;
+   display: block;
+   color:#fff000;
+}
+
+dl.portletslide-alert{
+   margin: 1px 0 1em 0;
+   background-color: #fff;
+}
+
+dl.portletslide-alert a {
+   text-decoration: none;
+   display: block;
+}
+
+/********************************************** Portlet forest *************************************/
+#portlet-forest .portletHeader {
+  background: url(&dtml-portal_url;/portlet/forest/header.jpg) 1px 1px no-repeat #76AB01;
+  border: 0px;
+  color: #ffffff;
+  padding: 0em 1em;
+  padding-left: 19px;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+
+#portlet-forest .portletItem {
+  margin: 0;
+  padding: 1em;
+  border: 0px;
+  overflow: hidden;
+  text-align: center; 
+  background: #136D05;
+}
+
+#portlet-forest .forest_title{
+   color: #ffffff;
+   text-align: left; 
+}
+
+#portlet-forest .tile{
+  text-align: left;
+  font-weight: bold;
+  display: block;
+  color: #ffffff !important;
+  margin-top: 7px;
+}
+
+#portlet-forest .description{
+   text-align: left;
+   font-weight: normal;
+   display: block;
+   color:#000;
+}
+
+dl.portletslide-forest{
+   margin: 1px 0 1em 0;
+   background-color: #fff;
+}
+
+dl.portletslide-forest a {
+   text-decoration: none;
+   display: block;
+}
+
+
+/********************************************** Portlet gray *************************************/
+#portlet-gray .portletHeader {
+  background: url(&dtml-portal_url;/portlet/gray/header.jpg) 0px 0px no-repeat #6a6b63;
+  border: 0px;
+  color: #ffffff;
+  padding: 0em 1em;
+  padding-left: 17px;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+
+#portlet-gray .portletItem {
+  margin: 0;
+  padding: 1em;
+  border: 0px;
+  overflow: hidden;
+  text-align: center; 
+  background: #B1BDB4;
+}
+
+#portlet-gray .gray_title{
+   color: #ffffff;
+   text-align: left; 
+}
+
+#portlet-gray .tile{
+  text-align: left;
+  font-weight: bold;
+  display: block;
+  color: #000000 !important;
+  margin-top: 7px;
+}
+
+#portlet-gray .description{
+   text-align: left;
+   font-weight: normal;
+   display: block;
+   color:#000;
+}
+
+dl.portletslide-gray{
+   margin: 1px 0 1em 0;
+   background-color: #fff;
+}
+
+dl.portletslide-gray a {
+   text-decoration: none;
+   display: block;
+}
+
+
+
+/********************************************** Portlet blue_style *************************************/
+#portlet-smile .portletHeader {
+  background: url(&dtml-portal_url;/portlet/smile/header.jpg) 1px 1px no-repeat #fc9e00;
+  border: 0px;
+  color: #ffffff;
+  padding: 0em 1em;
+  padding-left: 22px;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+
+#portlet-smile .portletItem {
+  margin: 0;
+  padding: 1em;
+  border: 0px;
+  overflow: hidden;
+  text-align: center; 
+  background: #93B1BF;
+}
+
+#portlet-smile .smile_title{
+   color: #ffffff;
+   text-align: left; 
+}
+
+#portlet-smile .tile{
+  text-align: left;
+  font-weight: bold;
+  display: block;
+  color: #000000 !important;
+  margin-top: 7px;
+}
+
+#portlet-smile .description{
+   text-align: left;
+   font-weight: normal;
+   display: block;
+   color:#000;
+}
+
+dl.portletslide-smile{
+   margin: 1px 0 1em 0;
+   background-color: #fff;
+}
+
+dl.portletslide-smile a {
+   text-decoration: none;
+   display: block;
+}
+
+
+/********************************************** Portlet blue_style *************************************/
+#portlet-blue_style .portletHeader {
+  background: url(&dtml-portal_url;/portlet/blue_style/header.jpg) 1px 2px no-repeat #0088aa;
+  border: 0px;
+  color: #ffffff;
+  padding: 0em 1em;
+  padding-left: 17px;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+
+#portlet-blue_style .portletItem {
+  margin: 0;
+  padding: 1em;
+  border: 0px;
+  overflow: hidden;
+  text-align: center; 
+  background: #BFD1D9;
+}
+
+#portlet-blue_style .blue_style_title{
+   color: #ffffff;
+   text-align: left; 
+}
+
+#portlet-blue_style .tile{
+  text-align: left;
+  font-weight: bold;
+  display: block;
+  color: #000000 !important;
+  margin-top: 7px;
+}
+
+
+#portlet-blue_style .description{
+   text-align: left;
+   font-weight: normal;
+   display: block;
+   color:#000;
+}
+
+dl.portletslide-blue_style{
+   margin: 1px 0 1em 0;
+   background-color: #fff;
+}
+
+dl.portletslide-blue_style a {
+   text-decoration: none;
+   display: block;
+}
+
+/********************************************** Portlet feminino *************************************/
+#portlet-feminino .portletHeader {
+  background: url(&dtml-portal_url;/portlet/feminino/header.jpg) 1px 6px no-repeat #d9caf4;
+  border: 0px;
+  color: #AF8FE8;
+  padding: 0em 1em;
+  padding-left: 16px;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+
+#portlet-feminino .portletItem {
+  margin: 0;
+  padding: 1em;
+  border: 0px;
+  overflow: hidden;
+  text-align: center; 
+  background: #af8fe8;
+}
+
+#portlet-feminino .feminino_title{
+   color:#AF8FE8;
+   text-align: left; 
+}
+
+#portlet-feminino .tile{
+  text-align: left;
+  font-weight: bold;
+  display: block;
+  color: #000000 !important;
+  margin-top: 7px;
+}
+
+
+#portlet-feminino .description{
+   text-align: left;
+   font-weight: normal;
+   display: block;
+   color:#000;
+}
+
+dl.portletslide-feminino{
+   margin: 1px 0 1em 0;
+   background-color: #fff;
+}
+
+dl.portletslide-feminino a {
+   text-decoration: none;
+   display: block;
+}
+
+
+
+
+
+
+/********************************************** Portlet default *************************************/
+#portlet-default .portletHeader {
+   background-color: #dee7ec;
+   border: 1px solid #8cacbb;
+   padding: 0em 1em;
+   text-transform: lowercase;
+   font-weight: normal;
+   line-height: 1.6em;
+}
+
+#portlet-default .portletItem {
+   margin: 0;
+   padding: 1em;
+   border-left: 1px solid #8cacbb;
+   border-right: 1px solid #8cacbb;
+   overflow: hidden;
+   text-align: center; 
+}
+
+#portlet-default .default_title{
+   color:#000;
+   text-align: left; 
+}
+
+#portlet-default .tile{
+   text-align: left;
+   font-weight: bold;
+   display: block;
+}
+
+
+#portlet-default .description{
+   text-align: left;
+   font-weight: normal;
+   display: block;
+   color:#000;
+}
+
+dl.portletslide-default{
+   border-bottom: 1px solid #8cacbb;
+   margin: 1px 0 1em 0;
+   background-color: #fff;
+}
+
+
+dl.portletslide-default a {
+   text-decoration: none;
+   display: block;
+}
+
+
+
+
+
+
+
+
+
+/********************************************** Portlet silver *************************************/
+#portlet-silver .portletHeader {
+   background-color: #ff0000;
+   border: 1px solid #ff0000;
+   padding: 0em 1em;
+   text-transform: lowercase;
+   font-weight: normal;
+   line-height: 1.6em;
+}
+
+#portlet-silver .portletItem {
+   margin: 0;
+   padding: 1em;
+   border-left: 1px solid #ff0000;
+   border-right: 1px solid #ff0000;
+   overflow: hidden;
+   text-align: center; 
+}
+
+#portlet-silver .silver_title{
+   color:#fff000;
+   text-align: left; 
+}
+
+#portlet-silver .tile{
+   text-align: left;
+   font-weight: bold;
+   display: block;
+}
+
+
+#portlet-silver .description{
+   text-align: left;
+   font-weight: normal;
+   display: block;
+   color:#000;
+}
+
+dl.portletslide-silver{
+   border-bottom: 1px solid red;
+   margin: 1px 0 1em 0;
+   background-color: #fff;
+}
+
+dl.portletslide-silver a {
+   text-decoration: none;
+   display: block;
+}

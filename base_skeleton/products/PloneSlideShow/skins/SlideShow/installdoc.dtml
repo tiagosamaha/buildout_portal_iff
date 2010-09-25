@@ -1,0 +1,78 @@
+======================================
+Installing PloneSlideShow (0.9.0)
+======================================
+
+PloneSlideShow is a tool for presentation of random images and news in Plone sites.
+
+
+:Author's: Cleber J Santos and Thiago M Figueiredo
+:Contact: cleber_jsantos@yahoo.com.br and  tmarquesfigueredo@yahoo.com.br
+:Date: Date: 2007-03-21
+:Version: 0.9.0 
+
+
+.. contents:: Table of Contents
+   :depth: 2
+   :backlinks: top
+
+.. sectnum::
+   :depth: 2
+
+Requirements
+------------
+
+* Requires "Plone 2.5+" (might work with Plone 2.1.x)
+
+* Requires "CMF 1.3+" (might work with CMF 1.2.x)
+
+* Requires "Zope 2.6+" (might work with Zope 2.5.x)
+
+* Requires "CMFPublicator 1.2+"
+
+Information
+------------
+
+* Please read the doc/LICENSE file to learn about PloneSlideShow licence of use.
+
+* Read the doc/ChangeLog to find out what has changed since the last version.
+
+* Read the doc/TODO to find out what will be made in future versions.
+
+* doc/CREDITS has all PloneSlideShow contributors, thanks to all.
+
+Installation
+------------
+
+1. Unpack the tarball.
+2. Copy or link the PloneSlideShow directory into the Products directory of your INSTANCE_HOME / SOFTWARE_HOME.
+3. Restart the Zope instance
+4. Use the portal_quickinstaller in Plone Site to install it. (Easier, jaster and clean!)
+5. Or: Use the link Preferences -> Add / Remove Products in Site Plone ;-)
+6. The CMFPublicator Tool installation is required. (For more information, visit http://www.zope.org/Members/ferri/CMFPublicator/)
+
+Add the line::
+
+  <tal:block metal:use-macro="context/global_slide/macros/panel" />
+
+desired ZPT.
+
+
+Installation Problems
+=====================
+
+
+If you have problems to setup PloneSlideShow?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You can ask questions at cleber_jsantos@yahoo.com.br or tmarquesfigueredo@yahoo.com.br
+
+Having general Zope problems?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Visit http://www.zope.org/Resources
+
+If you have general Plone problems?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Report any bugs or inconsistencies in the Plone Collector (use the ErrorReporting product!): http://plone.org/support
+
+If you have problems to setup CMFPublicator?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Visit http://www.zope.org/Members/ferri/CMFPublicator/

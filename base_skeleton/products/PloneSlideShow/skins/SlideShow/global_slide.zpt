@@ -1,0 +1,127 @@
+<html i18n:domain="ploneslideshow"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+ <body>
+  <div tal:omit-tag=""
+       metal:define-macro="panel"
+       tal:define="props python:here.portal_properties.ploneslideshow_properties;
+                   default_skin props/slide_default_skin;
+                   default_skin python:test(default_skin,default_skin,'default')">
+
+   <tal:validation tal:condition="python:props.enable_portlet == False">
+
+    <div tal:attributes="id string:container_${default_skin}"  
+         tal:define="obj context/list_panel">
+     <div tal:omit-tag="" tal:condition="python:obj =='not instaled'">
+      <div class="portalMessage" i18n:translate="publicatorrequired">
+       The CMFPublicator is requerid, more informations read the PloneSlideShow documentation.
+      </div>
+
+      <ul class="configletDetails">
+       <li>
+        <a tal:attributes="class string:navTreeCurrentItem;
+                           href  python:context.portal_url() + '/slideshow_docs'">
+         <img tal:attributes="src python:context.portal_url() + '/book_icon.gif';
+                              height python:'16';
+                              width python:'16'" />
+         <span i18n="documentation">Documentation</span>
+        </a>
+       </li>
+      </ul>
+     </div>
+
+     <div tal:omit-tag="" tal:condition="python:obj =='not boxid'">
+      <div class="portalMessage" i18n:translate="notboxid">
+       Box name don't exists in CMFPublicator, more informations read the PloneSlideShow documentation.
+      </div>
+
+      <ul class="configletDetails">
+       <li>
+        <a tal:attributes="class string:navTreeCurrentItem;
+                           href  python:context.portal_url() + '/slideshow_docs'">
+         <img tal:attributes="src python:context.portal_url() + '/book_icon.gif';
+                              height python:'16';
+                              width python:'16'" />
+         <span i18n="documentation">Documentation</span>
+        </a><br /><br />
+
+        <a tal:attributes="class string:navTreeCurrentItem;
+                           href  python:context.portal_url() + '/createBox'">
+
+
+         <img tal:attributes="src python:context.portal_url() + '/action_icon.gif';
+                              height python:'16';
+                              width python:'16'" />
+
+         <span i18n="autocreate">Auto create the slideshow box</span>
+        </a>
+       </li>
+      </ul>
+     </div>
+
+     <div tal:omit-tag="" tal:condition="python:obj =='not list'">
+      <div class="portalMessage" i18n:translate="notlist">
+       Not exists a object list in CMFPublicator, more informations read the PloneSlideShow documentation.
+      </div>
+
+      <ul class="configletDetails">
+       <li>
+        <a tal:attributes="class string:navTreeCurrentItem;
+                           href  python:context.portal_url() + '/slideshow_docs'">
+         <img tal:attributes="src python:context.portal_url() + '/book_icon.gif';
+                              height python:'16';
+                              width python:'16'" />
+         <span i18n="documentation">Documentation</span>
+        </a>
+       </li>
+      </ul>
+     </div>
+
+     <div tal:omit-tag="" 
+          tal:condition="python: obj != 'not list' and obj != 'not instaled' and obj != 'not boxid'">
+
+      <form name="tv_home" action=""
+            tal:attributes="id string:painel-conteudo_${default_skin}"> 
+       <textarea name="select_tv_home" cols="0" rows="0">
+        <div tal:omit-tag="" tal:repeat="items python:obj">
+         <span tal:omit-tag="" tal:content="python:items['Rights'] + '|' + context.portal_url() + '/' + items['ImageURL'] + '|' + items['Title'] + '|' + context.portal_url() + '/' + items['RelativeContentURL'] + '|&nbsp;|' + '|' + items['Type'] +'|'" />
+        </div>
+       </textarea>
+      </form>
+      <div class="box1">
+       <div tal:attributes="id string:painel_${default_skin}">
+        <script type="text/javascript">startPanel(0);</script>
+        <div style="opacity: 1.84;" id="to-blend">
+         <div id="bann" style="display: none;"></div>
+         <div id="flashW" style="display: none;"></div>
+         <div tal:attributes="id string:prox-ant_${default_skin}">
+          <a style="visibility: visible;" href="javascript:void(0)"
+             tal:attributes="id string:anterior_${default_skin}" onclick="if(okToGo)changeImg(-1)">
+
+           <img tal:attributes="src string:${context/portal_url}/skins/${default_skin}/anterior.png;
+                                border string:0;
+                                id string:anterior">
+          </a>
+
+
+          <a style="visibility: visible;" href="javascript:void(0)" 
+             tal:attributes="id string:proximo_${default_skin}" onclick="if(okToGo)changeImg(1)">
+           <img tal:attributes="src string:${context/portal_url}/skins/${default_skin}/proximo.png;
+                                border string:0;
+                                id string:proximo">
+          </a>
+         </div>
+        </div>
+
+       </div>
+      </div>
+     </div>
+    </div>
+
+   </tal:validation>
+
+  </div>
+ </body>
+</html>

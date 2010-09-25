@@ -1,0 +1,55 @@
+<dl class="portlet"
+    i18n:domain="vaporisation"
+    tal:attributes="id string:portlet-${context/getId}"
+    tal:define="joint view/isJointNavigation;
+		currents view/currentSubjects;
+		removable view/removableTags;">
+
+  <dt class="portletHeader">
+    <span class="portletTopLeft"></span>
+    <a class="tile"
+       href=""
+       tal:content="context/title_or_id"
+       tal:attributes="href string:${context/absolute_url}/view">
+      Cloud name
+    </a>
+    <span class="portletTopRight"></span>
+  </dt>
+
+  <dd class="portletItem"
+      tal:content="structure context/@@cloud_rendering" />
+
+  <dd class="portletFooter"
+      tal:condition="python: (removable and joint) or
+		             (currents and not joint)">
+
+    <tal:joint condition="python: joint and removable">
+      <p class="discreet"
+	 i18n:translate="joint_navigation">
+	Joint navigation based on tags (click to remove) :
+      </p>
+      <tal:tag repeat="tag removable">
+	<a href="" tal:content="tag/name" tal:attributes="href tag/link"/>
+	<tal:separator condition="not: repeat/tag/end">
+	  &bull;
+	</tal:separator>
+      </tal:tag>
+    </tal:joint>
+
+    <tal:joint condition="not: joint">
+      <tal:browsing tal:condition="currents">
+	<p class="discreet"
+	   i18n:translate="normal_navigation">
+	  Actually searching on :
+	</p>
+	<tal:tag repeat="tag currents">
+	  <strong tal:content="tag" />
+	</tal:tag>
+      </tal:browsing>
+    </tal:joint>
+
+    <span class="portletBottomLeft"></span>
+    <span class="portletBottomRight"></span>
+  </dd>
+
+</dl>

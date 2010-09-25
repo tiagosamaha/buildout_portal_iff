@@ -1,0 +1,15 @@
+PloneSlideShow install
+
+  1. Unpack the tarball. 
+
+  2. Copy or link the 'PloneSlideShow' directory into the 'Products'
+     directory of your INSTANCE_HOME / SOFTWARE_HOME.
+
+  3. Restart Zope.
+
+  4. Use the portal_quickinstaller in Plone Site to install it. (More easy, fast and clean!)
+
+    or:
+
+    * Use the link Preferences -> Add / Remove Products in Site Plone ;-)
+

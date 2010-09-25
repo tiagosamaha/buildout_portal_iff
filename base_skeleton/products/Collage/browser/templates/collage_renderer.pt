@@ -1,0 +1,12 @@
+<div class="collage-row" tal:repeat="item view/getItems">
+  <div tal:attributes="id string:CantoEsquerdoSuperior_row_${repeat/item/number}"  ></div>
+  <div tal:attributes="id string:CantoDireitoSuperior_row_${repeat/item/number}"  ></div>
+  <div tal:attributes="id string:LateralDireita_row_${repeat/item/number}"  >
+  <div tal:attributes="class string:row_${repeat/item/number}">
+	<tal:item replace="structure item" />
+  </div>
+  </div>
+  <div tal:attributes="id string:CantoDireitoAbaixo_row_${repeat/item/number}"  ></div>
+  <div tal:attributes="id string:CantoEsquerdoAbaixo_row_${repeat/item/number}"  ></div>
+  <div tal:attributes="id string:hiddenShadowBottom_row_${repeat/item/number}" ></div>
+</div>

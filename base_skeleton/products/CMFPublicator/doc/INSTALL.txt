@@ -1,0 +1,23 @@
+CMFPublicator install
+
+  1. Unpack the tarball. 
+
+  2. Copy or link the 'CMFPublicator' directory into the 'Products'
+     directory of your INSTANCE_HOME / SOFTWARE_HOME.
+
+  3. Restart Zope.
+
+  4. Create an External Method in the root of your CMF or Plone Site:
+
+    id:             install_configuration
+    Module Name:    CMFPublicator.install
+    Function Name:  install
+
+    Click on the External Method you've just created and select the test tab.
+    Hopefully the method will give some output about the installation process.
+
+    or:
+
+    * Use the CMFQuickInstallerTool to install it. (More easy, fast
+      and clean!) ;-)
+

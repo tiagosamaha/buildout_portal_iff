@@ -1,0 +1,62 @@
+PloneSlideShow changes
+
+   Version 0.9.0: 2007-11-03
+
+        * Upgrade in the images and templates and Css
+
+        * Added portlet slideshow
+
+        * Bugs detected and corrected
+
+        * Translation revision
+
+        * Supported for presentation of files in the standard *.swf
+
+        * Added new skins
+
+   Version 0.8.0: 2007-09-19
+
+        * Upgrade in the images and templates and Css
+
+        * Translation revision
+
+        * Upgrade in the Java Script file
+
+        * Added documentation and faq templates
+
+        * Upgrade in skins
+
+   Version 0.7.0: 2007-05-01
+
+        * Upgrade in the images and templates and Css
+
+        * Translation revision
+
+   Version 0.6.0: 2007-04-13
+
+        * Upgrade in the Java Script file
+
+   Version 0.5.0: 2007-03-27
+
+        * Finished the skins tool
+
+        * Executed the test in skins tool
+
+        * Implemented the skins tool
+
+    Version 0.4.0: 2007-03-25
+
+        * Initial developement for skins tool
+
+    Version 0.3.0: 2007-03-23
+
+        * Added i18n, translation of PloneSlideShow
+
+    Version 0.2.0: 2007-03-22
+
+        * Added the tools portal_css and portal_javascript in Instalation script
+
+    Version 0.1.0: 2007-03-21
+
+        * Initial development
+

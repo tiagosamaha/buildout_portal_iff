@@ -1,0 +1,50 @@
+<div>
+ <h2 class="title">Installing PloneSlideShow (0.9.0)</h2>
+ <p>PloneSlideShow is a tool for presentation of random images and news in Plone sites.</p>
+
+ <div class="contents topic" id="table-of-contents">
+  <p class="topic-title first"><a name="table-of-contents">Table of Contents</a></p>
+  <ul class="auto-toc simple">
+   <li><a class="reference" href="#installation-slideshow" id="id1" name="id1">1&nbsp;&nbsp;&nbsp;Can I install PloneSlideShow?</a></li>
+   <li><a class="reference" href="#add-itens" id="id2" name="id2">2&nbsp;&nbsp;&nbsp;Can I add itens in PloneSlideShow?</a></li>
+   <li><a class="reference" href="#what-config" id="id3" name="id3">3&nbsp;&nbsp;&nbsp;What config the PloneSlideShow?</a></li>
+  </ul>
+ </div>
+
+ <div class="section" id="installation-slideshow">
+  <h3><a class="toc-backref" href="#table-of-contents" name="installation-slideshow">Can I install PloneSlideShow?</a></h3>
+  <ol class="arabic simple">
+   <li>Download and install the CMFPublicator 1.2+ tool in your Zope instance, for more information, visit <a class="reference" href="http://www.zope.org/Members/ferri/CMFPublicator/">http://www.zope.org/Members/ferri/CMFPublicator/</a></li>
+   <li>Download the PloneSlideShow product.</li>
+   <li>Unpack the tarball.</li>
+   <li>Copy or link the PloneSlideShow directory into the Products directory of your INSTANCE_HOME / SOFTWARE_HOME.</li>
+   <li>Restart the Zope instance</li>
+   <li>Use the portal_quickinstaller in Plone Site to install it. (Easier, jaster and clean!) Or: Use the link Preferences -&gt; Add / Remove Products in Site Plone ;-)</li>
+   <img align="center" tal:attributes="src string:imgfaq1.jpg" />
+   <li><pre class="literal-block">Add the line: <strong> &lt;tal:block metal:use-macro="context/global_slide/macros/panel" /&gt; </strong> desired ZPT</pre></li>
+  </ol>
+ </div>
+
+ <div class="section" id="add-itens">
+  <h3><a class="toc-backref" href="#table-of-contents" name="add-itens">Can I add itens in PloneSlideShow?</a></h3>
+  <ol class="arabic simple">
+   <li>Click of publications link.</li>
+   <img align="center" tal:attributes="src string:imgfaq2.jpg" />
+   <li>Search the box <i>Plone SlideShow</i> and press edit button.</li>
+   <li>Select the content that you want show in PloneSlideShow and press save button.</li>
+   <img align="center" tal:attributes="src string:imgfaq3.jpg" />
+  </ol>
+ </div>
+
+
+ <div class="section" id="what-config">
+  <h3><a class="toc-backref" href="#table-of-contents" name="what-config">What config the PloneSlideShow?</a></h3>
+  <ol class="arabic simple">
+   <li>Click of <i>site setup</i> or <i>preferences</i> link.</li>
+   <li>Click of <i>PloneSlideShow Configuration</i> link.</li>
+   <img align="center" tal:attributes="src string:imgfaq4.jpg" />
+  </ol>
+ </div>
+
+
+</div>

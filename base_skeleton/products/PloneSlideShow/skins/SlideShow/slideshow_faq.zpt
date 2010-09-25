@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/slideshow_config/macros/master"
+      i18n:domain="plone">
+
+ <tal:block metal:fill-slot="style_slot">
+  <style type="text/css"><!-- @import url(config_slideshow.css); --></style>
+  <style>
+     div.sidebar, div.contents {
+     background-image: url(faq.png);}
+  </style>
+ </tal:block>
+ <body>
+  <div class="documentContent" metal:fill-slot="slideshow_content"
+       tal:define="convertTo nocall:here/portal_transforms/convertTo|nothing">
+   <div tal:condition="nocall:convertTo"
+        tal:define="tpath template/absolute_url_path;
+                    stream python:convertTo('text/html', here.faq(), mimetype='text/html');
+                    formatted python:str(stream).replace('href=\x22#','href=\x22'+tpath+'#');"
+        tal:content="structure formatted"
+        tal:on-error="structure string:Documentation formatting failed: ${error/value}&lt;pre&gt;${here/faq}&lt;/pre;&gt;">
+   </div>
+   <pre tal:condition="not:nocall:convertTo"
+        tal:content="here/installdoc">
+   </pre>
+
+  </div>
+ </body>
+</html>
