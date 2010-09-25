@@ -82,7 +82,6 @@ def install_resources(self,out):
 
 	# Add CSS in resources.
        	print >>out, "Css Instalation completed"
-	import pdb; pdb.set_trace()
        	csstool.manage_removeStylesheet(id='slideshow.css')
        	csstool.manage_addStylesheet(id='slideshow.css',
                 media='All',
