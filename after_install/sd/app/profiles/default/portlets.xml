@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<portlets>
+  
+ <!-- contextual portlet manager -->
+ <portletmanager 
+   name="sd.blocks" 
+   type="sd.app.portlets.manager.interfaces.IStructuredDocumentBlocks"
+   />
+
+ <!-- portlets -->
+ <portlet 
+   addview="sd.country"
+   title="Country"
+   description="A portlet representing a country"
+   for="sd.app.portlets.manager.interfaces.IStructuredDocumentBlocks"
+   />
+
+ <portlet 
+   addview="sd.person"
+   title="Person / character"
+   description="A portlet representing a person or character"
+   for="sd.app.portlets.manager.interfaces.IStructuredDocumentBlocks"
+   />
+
+ <portlet 
+   addview="sd.book"
+   title="Book"
+   description="A portlet representing a book or other kind of publication"
+   for="sd.app.portlets.manager.interfaces.IStructuredDocumentBlocks"
+   />
+
+ <portlet 
+   addview="sd.toc"
+   title="Table of contents"
+   description="A portlet display the content of the document"
+   for="sd.app.portlets.manager.interfaces.IStructuredDocumentBlocks"
+   />
+
+ <portlet 
+   addview="sd.slideshow"
+   title="Slideshow"
+   description="A portlet displaying a slideshow"
+   />
+
+</portlets>

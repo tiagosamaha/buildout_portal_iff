@@ -1,0 +1,41 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:sd="http://namespaces.zope.org/sd"
+    i18n_domain="sd">
+  
+  <!-- Configuration files Mechanism -->
+  <include file="meta.zcml" />
+  <include file="sheets.zcml" />
+
+
+  <adapter
+      factory="sd.config.adapters.ConfigurationStorage"
+      provides="sd.common.adapters.storage.interfaces.IStorage" />
+
+  <adapter
+      name="configuration" 
+      factory=".traversal.ConfigurationTraverser"
+      />
+
+  <browser:viewlet
+      name="sd.layout_configuration"
+      manager="sd.app.rendering.browser.interfaces.IAboveContentBody"
+      class=".viewlets.LayoutConfiguration"
+      permission="cmf.ModifyPortalContent" 
+      />
+
+  <browser:page
+      name="sd.configuration.create"
+      for="sd.contents.interfaces.IStructuredItem"
+      class=".forms.AddForm"
+      permission="cmf.ModifyPortalContent"
+      />
+  
+  <browser:page
+      name="edit"
+      for="sd.config.interfaces.IConfigurationSheet"
+      class=".forms.EditForm"
+      permission="cmf.ModifyPortalContent"
+      />
+
+</configure>

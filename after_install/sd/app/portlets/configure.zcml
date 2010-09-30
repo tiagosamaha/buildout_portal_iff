@@ -1,0 +1,22 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <include package=".blocks"  />
+  <include package=".manager" />
+
+  <!-- Thumbnails management and handling -->
+  <adapter
+      factory=".imaging.AssignmentThumbnailsHandler"
+      />
+  
+  <adapter
+      name="thumbnail" 
+      factory=".imaging.PortletThumbnailsTraverser"
+      />
+  
+  <subscriber
+      handler=".events.ThumbnailsGeneration"
+      for=".blocks.interfaces.IStructuredIllustratedBlock
+	   .interfaces.IImageUpdatedEvent"
+      />
+
+</configure>
