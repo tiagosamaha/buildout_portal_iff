@@ -4,12 +4,13 @@ PLONE_HOME=/usr/local/Plone
 
 DEPENDENCIES='
 python2.4
+python2.4-dev
 python-imaging
+python-setuptools
 gcc
 g++
 make
 bzip2
-python2.4-dev
 build-essential
 libssl-dev
 libpcre3-dev
@@ -19,7 +20,7 @@ xlhtml
 wv
 xsltproc
 unzip
-pdftohtml' 
+poppler-utils' 
 
 for package in $DEPENDENCIES
 do
@@ -29,4 +30,4 @@ do
     fi
 done
 
-`./$PLONE_HOME/Python-2.4/bin/easy_install imsvdex`
+easy_install-2.4 imsvdex
