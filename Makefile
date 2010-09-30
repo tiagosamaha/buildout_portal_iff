@@ -1,10 +1,10 @@
-all: install_dependecies install copy_scripts
+all: before_install install after_install
 
-install_dependecies: 
-	sudo apt-get install libpcre3-dev libssl-dev zlib1g-dev libjpeg62-dev libreadline5-dev readline-common libxml2-dev
+before_install: 
+	bash helper_scripts/before_install.sh
 
 install:
-	./install.sh --password="senha_do_portal" zeo
+	./install.sh --password=admin --user=root zeo
 
-copy_scripts: startCluster.sh stopCluster.sh restartCluster.sh
-	cp startCluster.sh stopCluster.sh restartCluster.sh /home/plone/Plone/zeocluster
+after_install:
+    bash helper_scripts/after_install.sh
