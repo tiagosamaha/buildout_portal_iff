@@ -7,4 +7,4 @@ install:
 	./install.sh --password=admin --user=root zeo
 
 after_install:
-    bash helper_scripts/after_install.sh
+	bash helper_scripts/after_install.sh
