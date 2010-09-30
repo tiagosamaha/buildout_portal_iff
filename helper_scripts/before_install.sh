@@ -25,7 +25,7 @@ for package in $DEPENDENCIES
 do
     if (! dpkg -s $package > /dev/null 2> /dev/null)
     then
-        `apt-get install -y $package`
+        apt-get install -y $package
     fi
 done
 
