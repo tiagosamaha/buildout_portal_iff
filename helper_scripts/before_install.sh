@@ -20,7 +20,8 @@ xlhtml
 wv
 xsltproc
 unzip
-poppler-utils' 
+poppler-utils
+psmisc' 
 
 for package in $DEPENDENCIES
 do
