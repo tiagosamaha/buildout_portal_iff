@@ -4,7 +4,7 @@ before_install:
 	bash helper_scripts/before_install.sh
 
 install:
-	./install.sh
+	./install.sh zeo
 
 after_install_:
 	bash helper_scripts/after_install.sh
